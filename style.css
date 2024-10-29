@@ -1,6 +1,6 @@
 body {
     color: rgb(0, 0, 0);
-    background-image: linear-gradient(45deg, rgba(20, 89, 110, 0.716), rgb(32, 32, 32));
+    background-image: linear-gradient(45deg, rgba(255, 253, 253, 0.716), rgb(57, 57, 57));
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
@@ -12,6 +12,30 @@ body {
 main {
     flex: 1;
     padding: 20px;
+}
+
+.content-columns {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.content-columns section {
+    flex: 1;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.ht {
+    font-size: medium;
+    text-align: center;
+}
+
+.ht i {
+    margin: 0 15px;
 }
 
 img {
@@ -31,26 +55,9 @@ h1, h2, h3 {
     line-height: 1.5;
     text-align: center;
 }
-p1 {
-    letter-spacing: 0.1em;
-    text-align: justify;
-    max-width: 800px; 
-    margin: 20px auto; 
-    line-height: 1.6; 
-}
-
-
 
 p {
     letter-spacing: 0.1em;
-    text-align: center;
-}
-
-footer p {
-    letter-spacing: 0.1em;
-}
-
-i {
     text-align: center;
 }
 
@@ -91,6 +98,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .content-columns {
+        flex-direction: column;
+        align-items: center;
+    }
     img {
         width: 100px;
         height: 100px;
