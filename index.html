@@ -9,52 +9,66 @@
 </head>
 <body>
     <header>
-        <div class="center">
-            <img src="img/fotoperfil.jpg" alt="Foto Régis Júnior">
-            <div>
-                <h1>Régis Júnior</h1>
-                <h2>Software Engineer</h2>
-                <p>Email: regisamxjr@gmail.com</p>
+        <nav>
+            <div style="display: flex; align-items: center;">
+                <img src="img/fotoperfil.jpg" alt="Foto perfil">
+                <h1>Régis Xavier</h1>
             </div>
-        </div>
+            <div>
+                <button>Home</button>
+                <a href="#sobre">    
+                   <button>Sobre</button>
+                </a>
+                <a href="#habilidades">    
+                   <button>Habilidades</button>
+                </a>
+                <button>Projetos</button>
+                <button><a href="https://wa.me/5551997469270" target="_blank">Me contrate</a></button>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <div class="content-columns">
-            <section>
-                <h3>Sobre mim:</h3>
-                <p>Sou um Jovem aprendiz determinado para ter meu espaço no mercado de trabalho, tenho o
-                    foco e a determinação como minhas virtudes, além de ser ambicioso, procuro empresas
-                    que me dêem o apoio e a oportunidade de mostrar o meu potencial para crescermos
-                    lado a lado.
-                </p>
-            </section>
-            <section>
-                <h3>Habilidades e competências:</h3>
-                <div class="ht">
-                    <i class="fab fa-html5 fa-lg"></i>HTML
-                    <i class="fa-brands fa-css3-alt fa-lg"></i>CSS
-                    <i class="fa-brands fa-js fa-lg"></i>JavaScript
-                    <i class="fas fa-file-excel"></i>Excel
-                 
-                </div>
-                <p>Inglês avançado</p>
-            </section>
-            <section>
-                <h3>Formação acadêmica:</h3>
-                <p>Ensino Médio: Leonardo da Vinci Alfa</p>
-                <p>Engenharia de Software - PUCRS</p>
-            </section>
+    <div class="container">
+        <div class="tela inicial">
+            <h2>RÉGIS</h2>
+            <h2>XAVIER</h2>
+            <p>SOFTWARE DEVELOPER</p>
+        </div>
+    </div>
+
+    <div class="skills" id="habilidades">
+        <h1>Minhas Habilidades</h1>
+        <div class="skill">
+            <i class="fab fa-js-square"></i>
+            <p>JavaScript</p>
         </div>
 
-        <section class="social-links">
-            <a href="https://www.linkedin.com/in/régis-júnior" target="_blank" class="social-btn">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/regisamxjr" target="_blank" class="social-btn">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-        </section>
-    </main>
+        <div class="skill">
+            <i class="fab fa-css3-alt"></i>
+            <p>CSS</p>
+        </div>
+        <div class="skill">
+            <i class="fab fa-html5"></i>
+            <p>HTML</p>
+        </div>
+        <div class="skill">
+            <i class="fab fa-github"></i>
+            <p>GitHub</p>
+        </div>
+        <div class="skill">
+            <i class="fab fa-java"></i>
+            <p>Java</p>
+        </div>
+    </div>
+
+    <div class="sobre" id="sobre">
+        <div class="imagem-sobre">
+            <img src="img/sobremim.jpg" alt="Foto sobre mim">
+        </div>
+        <div class="texto-sobre">
+            <h1>Sobre Mim</h1>
+            <p>Sou um desenvolvedor de software apaixonado por criar soluções inovadoras. Tenho experiência em diversas linguagens de programação, incluindo Java, JavaScript, HTML, e CSS. Estou sempre em busca de aprender novas tecnologias e aprimorar minhas habilidades para enfrentar desafios do mundo real. Trabalho bem tanto individualmente quanto em equipe, e sempre busco entregar resultados de alta qualidade.</p>
+        </div>
+    </div>
 </body>
 </html>
