@@ -113,7 +113,7 @@ nav button a {
     gap: 50px;
     margin: 0;
     padding: 50px 0;
-    background-color: #f4f4f4;
+    background-color: #e0e1dd;
 }
 
 .skill {
@@ -148,7 +148,7 @@ nav button a {
     display: flex;
     align-items: center;
     padding: 10vh 20px;
-    background-color: #f4f4f4;
+    background-color: #e0e1dd;
 }
 
 .imagem-sobre img {
@@ -208,4 +208,58 @@ nav button a {
 
 .linkedin {
     background-color: #0077B5;
+}
+
+/* Projetos */
+.projetos {
+    padding: 50px 20px;
+    background-color: #e0e1dd;
+}
+
+.projetos h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #FFD100;
+    margin-bottom: 40px;
+}
+
+.projeto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.projeto img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+
+.descricao {
+    max-width: 500px;
+}
+
+.descricao h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.descricao p {
+    font-size: 18px;
+    color: #555;
+}
+
+.projeto:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.projeto:hover .descricao {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
