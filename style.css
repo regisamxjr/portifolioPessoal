@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: white;
@@ -10,6 +10,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Header */
 header {
     background-color: #333;
     color: #FFD100;
@@ -32,6 +33,8 @@ nav img {
 nav h1 {
     margin: 0;
     font-size: 28px;
+    font-family: "Roboto Condensed", sans-serif; /* Fonte Roboto Condensed para "RÉGIS XAVIER" */
+    color: #FFD100; /* Cor para destacar */
 }
 
 nav button {
@@ -43,11 +46,12 @@ nav button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 nav button:hover {
     background-color: #FFD100;
+    transform: scale(1.1);
 }
 
 nav button a {
@@ -55,10 +59,7 @@ nav button a {
     text-decoration: none;
 }
 
-.container {
-    text-align: center;
-}
-
+/* Tela inicial */
 .tela {
     font-size: 24px;
     background-color: black;
@@ -73,12 +74,38 @@ nav button a {
 .tela h2 {
     font-size: 72px;
     margin: 5px 0;
+    font-family: "Playfair Display", serif;
+    color: #FFD100;
+}
+
+.software-engineer {
+    font-size: 36px;
+    font-family: "Playfair Display", serif;
+    color: #FFD100; /* Destaque para "SOFTWARE ENGINEER" */
 }
 
 .tela p {
     font-size: 36px;
 }
 
+.tela button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tela button:hover {
+    background-color: #FFD100;
+    transform: scale(1.1);
+}
+
+/* Habilidades */
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -116,6 +143,7 @@ nav button a {
     color: #FFD100;
 }
 
+/* Sobre mim */
 .sobre {
     display: flex;
     align-items: center;
@@ -143,4 +171,41 @@ nav button a {
 .texto-sobre p {
     font-size: 20px;
     color: #333;
+}
+
+/* Botões sociais */
+.social-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 24px;
+    color: white;
+    background-color: #444;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-button:hover {
+    transform: scale(1.1);
+}
+
+.gmail {
+    background-color: #DB4437;
+}
+
+.github {
+    background-color: #333;
+}
+
+.linkedin {
+    background-color: #0077B5;
 }
