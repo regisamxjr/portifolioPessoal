@@ -33,8 +33,8 @@ nav img {
 nav h1 {
     margin: 0;
     font-size: 28px;
-    font-family: "Roboto Condensed", sans-serif; /* Fonte Roboto Condensed para "RÉGIS XAVIER" */
-    color: #FFD100; /* Cor para destacar */
+    font-family: "Roboto Condensed", sans-serif; 
+    color: #FFD100; 
 }
 
 nav button {
@@ -81,7 +81,7 @@ nav button a {
 .software-engineer {
     font-size: 36px;
     font-family: "Playfair Display", serif;
-    color: #FFD100; /* Destaque para "SOFTWARE ENGINEER" */
+    color: #FFD100; 
 }
 
 .tela p {
@@ -285,6 +285,6 @@ nav button a {
 }
 
 .descricao a:hover {
-    color: #0056b3; /* Cor do link ao passar o mouse */
-    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+    color: #0056b3; 
+    text-decoration: underline;
 }
