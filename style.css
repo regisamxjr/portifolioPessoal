@@ -59,7 +59,7 @@ nav button a {
     text-decoration: none;
 }
 
-/* Tela inicial */
+
 .tela {
     font-size: 24px;
     background-color: black;
@@ -105,7 +105,7 @@ nav button a {
     transform: scale(1.1);
 }
 
-/* Habilidades */
+
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -152,9 +152,9 @@ nav button a {
 }
 
 .imagem-sobre img {
-    width: 350px;
+    width: 300px;
     height: auto;
-    border-radius: 20%;
+    border-radius: 10%;
 }
 
 .texto-sobre {
@@ -171,8 +171,11 @@ nav button a {
 .texto-sobre p {
     font-size: 20px;
     color: #333;
+    margin-top: 10px;
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.2;
 }
-
 /* Botões sociais */
 .social-buttons {
     margin-top: 20px;
@@ -210,13 +213,13 @@ nav button a {
     background-color: #0077B5;
 }
 
-/* Projetos */
-.projetos {
+
+.project {
     padding: 50px 20px;
     background-color: #e0e1dd;
 }
 
-.projetos h1 {
+.project h1 {
     text-align: center;
     font-size: 36px;
     color: #FFD100;
@@ -262,4 +265,26 @@ nav button a {
 .projeto:hover .descricao {
     transform: scale(1.05);
     transition: transform 0.3s ease;
+}
+
+.descricao p {
+    font-size: 18px;
+    color: #555;
+    text-align: justify; 
+    text-indent: 2em; 
+    margin-bottom: 15px; /
+}
+
+.descricao a {
+    display: inline-block;
+    margin-top: 10px; 
+    font-size: 16px;
+    color: #555; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+
+.descricao a:hover {
+    color: #0056b3; /* Cor do link ao passar o mouse */
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
 }
