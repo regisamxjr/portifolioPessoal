@@ -58,7 +58,35 @@ nav button a {
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
+nav div {
+    display: flex;
+    align-items: center;
+}
 
+.usa-button {
+    margin: 0; 
+    padding: 12px 18px;
+    font-size: 18px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usa-button:hover {
+    background-color: #FFD100;
+    transform: scale(1.1);
+}
+
+.usa-button img {
+    width: 20px;
+    height: 20px;
+}
 
 .tela {
     font-size: 24px;
