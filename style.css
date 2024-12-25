@@ -10,7 +10,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Header */
 header {
     background-color: #333;
     color: #FFD100;
@@ -171,7 +170,7 @@ nav div {
     color: #FFD100;
 }
 
-/* Sobre mim */
+
 .sobre {
     display: flex;
     align-items: center;
