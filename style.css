@@ -4,7 +4,6 @@ body {
     padding: 0;
     background-color: white;
     color: black;
-    overflow-x: hidden; /* Evita o scroll horizontal */
 }
 
 html {
@@ -15,16 +14,12 @@ header {
     background-color: #333;
     color: #FFD100;
     padding: 15px 30px;
-    box-sizing: border-box; /* Garante que o padding não cause overflow */
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%; /* Garante que o nav ocupe toda a largura */
-    box-sizing: border-box;
 }
 
 nav img {
@@ -37,8 +32,8 @@ nav img {
 nav h1 {
     margin: 0;
     font-size: 28px;
-    font-family: "Roboto Condensed", sans-serif;
-    color: #FFD100;
+    font-family: "Roboto Condensed", sans-serif; 
+    color: #FFD100; 
 }
 
 nav button {
@@ -62,10 +57,34 @@ nav button a {
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
-
 nav div {
     display: flex;
     align-items: center;
+}
+
+.usa-button {
+    margin: 0; 
+    padding: 12px 18px;
+    font-size: 18px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usa-button:hover {
+    background-color: #FFD100;
+    transform: scale(1.1);
+}
+
+.usa-button img {
+    width: 20px;
+    height: 20px;
 }
 
 .tela {
@@ -77,7 +96,6 @@ nav div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
 }
 
 .tela h2 {
@@ -90,7 +108,7 @@ nav div {
 .software-engineer {
     font-size: 36px;
     font-family: "Playfair Display", serif;
-    color: #FFD100;
+    color: #FFD100; 
 }
 
 .tela p {
@@ -114,15 +132,15 @@ nav div {
     transform: scale(1.1);
 }
 
+
 .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
     margin: 0;
-    padding: 50px 20px; /* Ajustado para não ultrapassar a largura */
+    padding: 50px 0;
     background-color: #e0e1dd;
-    box-sizing: border-box;
 }
 
 .skill {
@@ -131,7 +149,6 @@ nav div {
     align-items: center;
     text-align: center;
     padding: 10vh 20px;
-    max-width: 100%; /* Garante que a largura da skill não ultrapasse */
 }
 
 .skill i {
@@ -153,18 +170,16 @@ nav div {
     color: #000000;
 }
 
+
 .sobre {
     display: flex;
     align-items: center;
     padding: 10vh 20px;
     background-color: #e0e1dd;
-    flex-wrap: wrap;
-    box-sizing: border-box;
 }
 
 .imagem-sobre img {
-    width: 100%;
-    max-width: 300px; /* Garante que a imagem não ultrapasse 300px */
+    width: 300px;
     height: auto;
     border-radius: 10%;
 }
@@ -188,7 +203,7 @@ nav div {
     text-indent: 2em;
     line-height: 1.2;
 }
-
+/* Botões sociais */
 .social-buttons {
     margin-top: 20px;
     display: flex;
@@ -225,6 +240,7 @@ nav div {
     background-color: #0077B5;
 }
 
+
 .project {
     padding: 50px 20px;
     background-color: #e0e1dd;
@@ -243,21 +259,18 @@ nav div {
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    flex-wrap: wrap;
 }
 
 .projeto img {
-    width: 100%;
-    max-width: 300px; /* Ajustado para evitar ultrapassar a largura */
-    height: auto;
+    width: 300px;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
     margin-right: 30px;
 }
 
 .descricao {
-    max-width: 100%;
-    margin-bottom: 20px;
+    max-width: 500px;
 }
 
 .descricao h2 {
@@ -269,113 +282,36 @@ nav div {
 .descricao p {
     font-size: 18px;
     color: #555;
-    text-align: justify;
-    text-indent: 2em;
-    margin-bottom: 15px;
+}
+
+.projeto:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.projeto:hover .descricao {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.descricao p {
+    font-size: 18px;
+    color: #555;
+    text-align: justify; 
+    text-indent: 2em; 
+    margin-bottom: 15px; /
 }
 
 .descricao a {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 10px; 
     font-size: 16px;
-    color: #555;
-    text-decoration: none;
-    transition: color 0.3s;
+    color: #555; 
+    text-decoration: none; 
+    transition: color 0.3s; 
 }
 
 .descricao a:hover {
-    color: #0056b3;
+    color: #0056b3; 
     text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    nav h1 {
-        font-size: 24px;
-    }
-
-    .tela h2 {
-        font-size: 48px;
-    }
-
-    .tela p {
-        font-size: 24px;
-    }
-
-    .skills {
-        flex-direction: column;
-        padding: 30px 0;
-    }
-
-    .skill {
-        padding: 5vh 20px;
-    }
-
-    .sobre {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .imagem-sobre img {
-        width: 100%;
-    }
-
-    .social-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .project .projeto {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .projeto img {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .descricao {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    .tela h2 {
-        font-size: 36px;
-    }
-
-    .skills h1 {
-        font-size: 28px;
-    }
-
-    .skill i {
-        font-size: 60px;
-    }
-
-    .texto-sobre h1 {
-        font-size: 30px;
-    }
-
-    .texto-sobre p {
-        font-size: 18px;
-    }
-
-    .project h1 {
-        font-size: 28px;
-    }
-
-    .descricao h2 {
-        font-size: 24px;
-    }
-
-    .descricao p {
-        font-size: 16px;
-    }
 }
