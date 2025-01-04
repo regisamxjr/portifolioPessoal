@@ -315,3 +315,79 @@ nav div {
     color: #0056b3; 
     text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .tela {
+        padding: 15vh 10px;
+    }
+
+    .tela h2 {
+        font-size: 48px;
+    }
+
+    .tela p {
+        font-size: 24px;
+    }
+
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        padding: 5vh 10px;
+    }
+
+    .sobre {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imagem-sobre img {
+        width: 80%;
+        height: auto;
+    }
+
+    .texto-sobre {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .project {
+        padding: 20px 10px;
+    }
+
+    .projeto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projeto img {
+        width: 100%;
+        height: auto;
+    }
+
+    .descricao {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .descricao h2 {
+        font-size: 24px;
+    }
+
+    .descricao p {
+        font-size: 16px;
+    }
+}
