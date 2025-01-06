@@ -316,6 +316,7 @@ nav div {
     text-decoration: underline;
 }
 
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
