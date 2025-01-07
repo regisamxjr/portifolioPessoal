@@ -132,6 +132,34 @@ nav div {
     transform: scale(1.1);
 }
 
+.hire-me-button {
+    display: block;
+    margin: 20px auto 0; 
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #000; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hire-me-button:hover {
+    background-color: #FFD100; 
+    color: #000; 
+    transform: scale(1.1);
+}
+
+.hire-me-button a {
+    color: inherit; 
+    text-decoration: none;
+}
+
+
 
 .skills {
     display: flex;
