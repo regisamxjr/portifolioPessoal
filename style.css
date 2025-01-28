@@ -198,6 +198,57 @@ nav div {
     color: #000000;
 }
 
+.certificados {
+    padding: 50px 0;
+    background-color: #e0e1dd;
+    text-align: center;
+}
+
+.certificados h1 {
+    font-size: 36px;
+    margin-bottom: 90px; /* Distância maior entre o título e os cards */
+    color: #333;
+}
+
+.certificados-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Maior espaçamento entre os certificados */
+    overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+    padding-bottom: 20px;
+}
+
+.certificado {
+    display: flex;
+    flex-direction: column; /* Para alinhar a imagem e a legenda na vertical */
+    align-items: center;
+    width: 300px; /* Maior largura para o certificado */
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+.certificado img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.certificado p {
+    margin-top: 12px;
+    font-size: 16px; /* Fonte maior para a legenda */
+    color: #444;
+}
+
+.certificado:hover {
+    transform: scale(1.1); /* Efeito hover ampliado */
+}
+
+
 
 .sobre {
     display: flex;
