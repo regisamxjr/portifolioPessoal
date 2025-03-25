@@ -23,15 +23,15 @@ nav {
 }
 
 nav img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 15px;
 }
 
 nav h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 24px;
     font-family: "Roboto Condensed", sans-serif; 
     color: #FFD100; 
 }
@@ -99,20 +99,20 @@ nav div {
 }
 
 .tela h2 {
-    font-size: 72px;
-    margin: 5px 0;
+    font-size: 48px;
+    margin: 3px 0;
     font-family: "Playfair Display", serif;
     color: #FFD100;
 }
 
 .software-engineer {
-    font-size: 36px;
+    font-size: 24px;
     font-family: "Playfair Display", serif;
     color: #FFD100; 
 }
 
 .tela p {
-    font-size: 36px;
+    font-size: 24px;
 }
 
 .tela button {
@@ -159,16 +159,23 @@ nav div {
     text-decoration: none;
 }
 
-
-
 .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 30px;
     margin: 0;
     padding: 50px 0;
     background-color: #e0e1dd;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .skill {
@@ -176,17 +183,18 @@ nav div {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 10vh 20px;
+    padding: 20px;
+    min-width: 120px;
 }
 
 .skill i {
-    font-size: 80px;
+    font-size: 60px;
     color: #333;
 }
 
 .skill p {
     margin-top: 10px;
-    font-size: 24px;
+    font-size: 18px;
     color: black;
 }
 
@@ -222,7 +230,7 @@ nav div {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    width: 300px; 
+    width: 250px; 
     text-align: center;
     border-radius: 15px;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
@@ -240,15 +248,13 @@ nav div {
 
 .certificado p {
     margin-top: 12px;
-    font-size: 16px; 
+    font-size: 14px; 
     color: #444;
 }
 
 .certificado:hover {
     transform: scale(1.1);
 }
-
-
 
 .sobre {
     display: flex;
@@ -258,7 +264,7 @@ nav div {
 }
 
 .imagem-sobre img {
-    width: 300px;
+    width: 250px;
     height: auto;
     border-radius: 10%;
 }
@@ -269,13 +275,13 @@ nav div {
 }
 
 .texto-sobre h1 {
-    font-size: 36px;
+    font-size: 28px;
     color: #000000;
     margin-bottom: 20px;
 }
 
 .texto-sobre p {
-    font-size: 20px;
+    font-size: 16px;
     color: #333;
     margin-top: 10px;
     text-align: justify;
@@ -319,7 +325,6 @@ nav div {
     background-color: #0077B5;
 }
 
-
 .project {
     padding: 50px 20px;
     background-color: #e0e1dd;
@@ -332,7 +337,6 @@ nav div {
     margin-bottom: 40px;
 }
 
-
 .projeto {
     display: flex;
     flex-direction: row;
@@ -342,29 +346,27 @@ nav div {
 }
 
 .projeto img {
-    width: 300px;
-    height: 200px;
+    width: 250px;
+    height: 180px;
     object-fit: cover;
     border-radius: 10px;
     margin-right: 30px;
 }
-
 
 .descricao {
     max-width: 500px;
 }
 
 .descricao h2 {
-    font-size: 28px;
+    font-size: 24px;
     color: #333;
     margin-bottom: 10px;
 }
 
 .descricao p {
-    font-size: 18px;
+    font-size: 16px;
     color: #555;
 }
-
 
 .projeto:hover img {
     transform: scale(1.05);
@@ -377,7 +379,7 @@ nav div {
 }
 
 .descricao p {
-    font-size: 18px;
+    font-size: 16px;
     color: #555;
     text-align: justify; 
     text-indent: 2em; 
@@ -398,71 +400,153 @@ nav div {
     text-decoration: underline;
 }
 
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #444;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #FFD100;
+    transform: scale(1.1);
+}
 
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav div {
+        flex-direction: column;
+        width: 100%;
     }
 
     nav button {
         width: 100%;
         margin: 5px 0;
+        font-size: 16px;
+    }
+
+    nav img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    nav h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
     }
 
     .tela {
-        padding: 15vh 10px;
+        padding: 10vh 10px;
+        text-align: center;
     }
 
     .tela h2 {
-        font-size: 48px;
+        font-size: 42px;
     }
 
     .tela p {
-        font-size: 24px;
+        font-size: 20px;
+    }
+
+    .social-buttons {
+        gap: 15px;
+    }
+
+    .social-button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .hire-me-button {
+        width: 80%;
+        font-size: 16px;
     }
 
     .skills {
-        flex-direction: column;
-        align-items: center;
+        padding: 30px 10px;
     }
 
     .skill {
-        padding: 5vh 10px;
+        padding: 3vh 10px;
+    }
+
+    .skill i {
+        font-size: 60px;
+    }
+
+    .skill p {
+        font-size: 20px;
+    }
+
+    .certificados-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .certificado {
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .sobre {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        padding: 30px 15px;
     }
 
     .imagem-sobre img {
-        width: 80%;
-        height: auto;
+        width: 250px;
+        margin-bottom: 20px;
     }
 
     .texto-sobre {
         margin-left: 0;
-        margin-top: 20px;
+        text-align: center;
+    }
+
+    .texto-sobre h1 {
+        font-size: 30px;
+    }
+
+    .texto-sobre p {
+        font-size: 16px;
     }
 
     .project {
-        padding: 20px 10px;
+        padding: 30px 15px;
     }
 
     .projeto {
         flex-direction: column;
-        align-items: center;
+        margin-bottom: 40px;
     }
 
     .projeto img {
         width: 100%;
-        height: auto;
+        height: 200px;
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 
     .descricao {
-        max-width: 100%;
         text-align: center;
     }
 
@@ -472,5 +556,91 @@ nav div {
 
     .descricao p {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tela h2 {
+        font-size: 36px;
+    }
+
+    .tela p {
+        font-size: 18px;
+    }
+
+    .social-button {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .hire-me-button {
+        width: 90%;
+        padding: 12px 20px;
+    }
+
+    .skill i {
+        font-size: 50px;
+    }
+
+    .skill p {
+        font-size: 18px;
+    }
+
+    .certificados h1 {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .texto-sobre h1 {
+        font-size: 26px;
+    }
+
+    .texto-sobre p {
+        font-size: 15px;
+    }
+
+    .project h1 {
+        font-size: 28px;
+    }
+
+    .descricao h2 {
+        font-size: 22px;
+    }
+
+    .descricao p {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .tela h2 {
+        font-size: 60px;
+    }
+
+    .tela p {
+        font-size: 28px;
+    }
+
+    .certificados-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .certificado {
+        width: 45%;
+    }
+
+    .projeto img {
+        width: 250px;
+    }
+
+    .descricao {
+        max-width: 400px;
     }
 }
