@@ -99,7 +99,7 @@ nav h1 {
     margin: 0; 
     padding: 12px 18px;
     font-size: 18px;
-    background-color: #444;
+    background-color: #444444;
     color: white;
     border: none;
     border-radius: 5px;
@@ -113,6 +113,26 @@ nav h1 {
 .usa-button:hover {
     background-color: #FFD100;
     transform: scale(1.1);
+}
+
+.curriculo-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #444444; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    text-align: center;
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 30px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s, transform 0.3s;
+    
+}
+
+.curriculo-button:hover {
+    background-color: #FFD100; 
+    color: #000;
+    transform: scale(1.1);
+
 }
 
 .usa-button img {
@@ -502,7 +522,31 @@ nav h1 {
     background: #c2c2c2; 
     color: #000; 
 }
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 10px;
+    }
+}
 @media (max-width: 1200px) {
     .projetos-grid {
         grid-template-columns: repeat(3, 1fr);
