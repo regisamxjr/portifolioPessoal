@@ -27,7 +27,6 @@ header {
     width: 100%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     margin: 0;
-    padding: 0;
 }
 
 nav {
@@ -534,188 +533,180 @@ nav h1 {
     background: #c2c2c2; 
     color: #000; 
 }
-@media (max-width: 1200px) {
-    .projetos-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .nav-links {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 992px) {
-    .projetos-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .tela h2 {
-        font-size: 48px;
-    }
-
-    .tela p {
-        font-size: 20px;
-    }
-
-    .skills h1,
-    .certificados h1,
-    .project h1 {
-        font-size: 32px;
-    }
-
-    .texto-sobre {
-        font-size: 20px;
-    }
-
-    .texto-sobre h1 {
-        font-size: 24px;
-    }
-}
-
+/* Ajustes adicionais para mobile */
 @media (max-width: 768px) {
-    header nav {
-        flex-direction: column;
+    /* Header e navegação */
+    header {
+        padding: 10px 15px;
+    }
+    
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
     }
-
+    
+    .logo-container {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
     .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-
+    
+    .nav-button, .curriculo-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    /* Seção inicial */
     .tela {
-        padding: 20vh 10px;
-        text-align: center;
+        padding: 15vh 20px;
     }
-
+    
     .tela h2 {
-        font-size: 36px;
+        font-size: 2.5rem;
+        line-height: 1.2;
     }
-
+    
     .tela p {
-        font-size: 18px;
-    }
-
-    .sobre {
-        flex-direction: column;
+        font-size: 1.1rem;
         text-align: center;
     }
-
-    .texto-sobre {
-        margin-left: 0;
-        margin-top: 20px;
-    }
-
-    .skills-grid {
-        gap: 20px;
-    }
-
-    .certificados-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-
+    
     .social-buttons {
         gap: 15px;
-        flex-wrap: wrap;
     }
-}
-
-@media (max-width: 600px) {
-    .projetos-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .tela h2 {
-        font-size: 28px;
-    }
-
-    .tela p {
-        font-size: 16px;
-    }
-
-    .hire-me-button {
-        padding: 12px 20px;
-        font-size: 16px;
-    }
-
-    .descricao h2 {
-        font-size: 18px;
-    }
-
-    .descricao p {
-        font-size: 13px;
-    }
-
-    .descricao a {
-        padding: 10px 20px;
-        font-size: 13px;
-    }
-
-    .certificados h1,
-    .skills h1,
-    .project h1 {
-        font-size: 28px;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 5px;
-    }
-
-    header {
-        padding: 10px;
-    }
-
-    nav img {
-        width: 40px;
-        height: 40px;
-    }
-
-    nav h1 {
-        font-size: 20px;
-    }
-
-    .nav-button {
-        font-size: 14px;
-        padding: 8px 14px;
-    }
-
-    .usa-button,
-    .curriculo-button {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
-
-    .tela h2 {
+    
+    .social-button {
+        width: 50px;
+        height: 50px;
         font-size: 24px;
     }
-
-    .tela p {
-        font-size: 14px;
-    }
-
+    
     .hire-me-button {
-        font-size: 14px;
-        padding: 10px 16px;
+        padding: 12px 24px;
+        font-size: 16px;
     }
+    
+    /* Seção Sobre */
+    .sobre {
+        flex-direction: column;
+        padding: 50px 20px;
+        text-align: center;
+    }
+    
+    .imagem-sobre img {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    
+    .texto-sobre {
+        margin-left: 0;
+        padding: 0 10px;
+    }
+    
+    .texto-sobre h1 {
+        font-size: 1.8rem;
+    }
+    
+    .texto-sobre p {
+        font-size: 1rem;
+        text-indent: 1.5em;
+        line-height: 1.5;
+    }
+    
+    /* Certificados */
+    .certificados {
+        padding: 40px 10px;
+    }
+    
+    .certificados h1 {
+        margin-bottom: 40px;
+    }
+    
+    .certificados-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    /* Projetos */
+    .project {
+        padding: 50px 10px;
+    }
+    
+    .projetos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .projeto {
+        margin-bottom: 20px;
+    }
+    
+    .descricao {
+        padding: 15px;
+    }
+    
+    .descricao h2 {
+        font-size: 1.2rem;
+    }
+    
+    .descricao p {
+        font-size: 0.9rem;
+    }
+    
+    .descricao a {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
 
+/* Ajustes para telas muito pequenas (menos de 480px) */
+@media (max-width: 480px) {
+    /* Header */
+    .nav-links {
+        gap: 8px;
+    }
+    
+    .nav-button, .curriculo-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    /* Seção inicial */
+    .tela h2 {
+        font-size: 2rem;
+    }
+    
+    /* Certificados */
+    .certificados-container {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Habilidades */
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .skill {
+        min-width: auto;
+        padding: 15px;
+    }
+    
     .skill i {
         font-size: 40px;
     }
-
+    
     .skill p {
         font-size: 14px;
-    }
-
-    .social-button {
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
-    }
-
-    .descricao {
-        padding: 10px;
     }
 }
