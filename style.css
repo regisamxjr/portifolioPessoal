@@ -11,8 +11,13 @@ body {
     background-color: white;
     color: black;
     box-sizing: border-box;
-    
-    
+    width: 100%;
+    overflow: hidden;
+}
+
+header,main,section{
+    width: 100%;
+    box-sizing: border-box;
 }
 
 html {
