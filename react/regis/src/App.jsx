@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Sobre from './pages/Sobre'
 import Projetos from './pages/Projetos'
 import Contato from './pages/Contato'
+import Certificados from './pages/Certificados'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="sobre" element={<Sobre />} />
           <Route path="projetos" element={<Projetos />} />
+          <Route path="certificados" element={<Certificados />} />
           <Route path="contato" element={<Contato />} />
         </Route>
       </Routes>

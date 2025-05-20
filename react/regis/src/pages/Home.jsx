@@ -1,8 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaLinkedin, FaWhatsapp, FaArrowRight } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaWhatsapp, FaArrowRight, FaReact, FaNodeJs, FaDatabase, FaDocker, FaAws } from 'react-icons/fa';
+import { SiTypescript, SiJavascript, SiTailwindcss, SiMongodb, SiPostgresql } from 'react-icons/si';
 
 const Home = () => {
+  const tecnologias = [
+    { nome: 'React', icon: FaReact, cor: 'text-blue-400' },
+    { nome: 'Node.js', icon: FaNodeJs, cor: 'text-green-400' },
+    { nome: 'TypeScript', icon: SiTypescript, cor: 'text-blue-500' },
+    { nome: 'JavaScript', icon: SiJavascript, cor: 'text-yellow-400' },
+    { nome: 'MongoDB', icon: SiMongodb, cor: 'text-green-500' },
+    { nome: 'PostgreSQL', icon: SiPostgresql, cor: 'text-blue-300' },
+    { nome: 'Docker', icon: FaDocker, cor: 'text-blue-600' },
+    { nome: 'AWS', icon: FaAws, cor: 'text-orange-500' },
+    { nome: 'Tailwind CSS', icon: SiTailwindcss, cor: 'text-cyan-400' }
+  ];
+
   return (
     <div className="min-h-screen bg-black text-white">
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -78,23 +91,66 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-fade-in-up">
             Tecnologias
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {['React', 'Node.js', 'JavaScript', 'TypeScript'].map((skill, index) => (
-              <div
-                key={skill}
-                className="group p-6 rounded-lg bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <h3 className="text-lg font-semibold text-center text-gray-300 group-hover:text-blue-400 transition-colors">
-                  {skill}
-                </h3>
-              </div>
-            ))}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {tecnologias.map((tech, index) => {
+              const Icon = tech.icon;
+              return (
+                <div
+                  key={tech.nome}
+                  className="group p-6 rounded-lg bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="flex flex-col items-center">
+                    <Icon className={`text-4xl mb-4 ${tech.cor}`} />
+                    <h3 className="text-lg font-semibold text-center text-gray-300 group-hover:text-blue-400 transition-colors">
+                      {tech.nome}
+                    </h3>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      
+      <section className="py-20 bg-black relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-fade-in-up">
+            Contribuições GitHub
+          </h2>
+          <div className="bg-gray-900/50 rounded-lg p-6 backdrop-blur-sm border border-gray-800 animate-fade-in-up">
+            <img
+              src="https://ghchart.rshah.org/regisamxjr"
+              alt="GitHub Contributions"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-black relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-fade-in-up">
+            Estatísticas GitHub
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-gray-900/50 rounded-lg p-6 backdrop-blur-sm border border-gray-800 animate-fade-in-up">
+              <img
+                src="https://github-readme-stats.vercel.app/api?username=regisamxjr&show_icons=true&theme=dark&hide_border=true"
+                alt="GitHub Stats"
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+            <div className="bg-gray-900/50 rounded-lg p-6 backdrop-blur-sm border border-gray-800 animate-fade-in-up">
+              <img
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=regisamxjr&layout=compact&theme=dark&hide_border=true"
+                alt="Most Used Languages"
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

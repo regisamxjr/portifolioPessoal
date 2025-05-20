@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { FaBars, FaTimes, FaHome, FaUser, FaCode, FaEnvelope } from 'react-icons/fa'
+import { FaBars, FaTimes, FaHome, FaUser, FaCode, FaEnvelope, FaCertificate } from 'react-icons/fa'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -20,6 +20,7 @@ const Header = () => {
     { path: '/', label: 'Home', icon: FaHome },
     { path: '/sobre', label: 'Sobre', icon: FaUser },
     { path: '/projetos', label: 'Projetos', icon: FaCode },
+    { path: '/certificados', label: 'Certificados', icon: FaCertificate },
     { path: '/contato', label: 'Contato', icon: FaEnvelope }
   ]
 
