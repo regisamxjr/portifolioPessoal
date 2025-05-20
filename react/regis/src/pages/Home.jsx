@@ -38,7 +38,7 @@ const Home = () => {
               </p>
               <div className="flex gap-4 mb-8 animate-fade-in-up delay-200">
                 <a
-                  href="https://github.com/seu-usuario"
+                  href="https://github.com/regisamxjr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-900 rounded-full text-gray-400 hover:text-blue-400 hover:bg-gray-800 transition-all duration-300 hover:-translate-y-1 hover:scale-110"
@@ -46,7 +46,7 @@ const Home = () => {
                   <FaGithub size={24} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/seu-usuario"
+                  href="https://linkedin.com/in/regisamxjr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-900 rounded-full text-gray-400 hover:text-blue-400 hover:bg-gray-800 transition-all duration-300 hover:-translate-y-1 hover:scale-110"
@@ -54,20 +54,24 @@ const Home = () => {
                   <FaLinkedin size={24} />
                 </a>
               </div>
-              <div className="flex flex-wrap gap-4 justify-center md:justify-start animate-fade-in-up delay-300">
-                <Link
-                  to="/projetos"
-                  className="group px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all duration-300 flex items-center gap-2 hover:scale-105"
-                >
-                  Ver Projetos
-                  <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <Link
-                  to="/contato"
-                  className="px-8 py-3 border-2 border-blue-500 text-blue-500 rounded-lg font-medium hover:bg-blue-500/10 transition-all duration-300 hover:scale-105"
-                >
-                  Contato
-                </Link>
+              <div className="grid grid-cols-3 md:grid-cols-5 gap-2 mb-8">
+                {tecnologias.map((tech, index) => {
+                  const Icon = tech.icon;
+                  return (
+                    <div
+                      key={tech.nome}
+                      className="group p-2 rounded-lg bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
+                      style={{ animationDelay: `${index * 50}ms` }}
+                    >
+                      <div className="flex flex-col items-center">
+                        <Icon className={`text-xl mb-1 ${tech.cor}`} />
+                        <span className="text-xs text-gray-300 group-hover:text-blue-400 transition-colors">
+                          {tech.nome}
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -85,66 +89,32 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-black relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/5 to-transparent"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-fade-in-up">
-            Tecnologias
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {tecnologias.map((tech, index) => {
-              const Icon = tech.icon;
-              return (
-                <div
-                  key={tech.nome}
-                  className="group p-6 rounded-lg bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-blue-500 transition-all duration-300 hover:-translate-y-1 animate-fade-in-up"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="flex flex-col items-center">
-                    <Icon className={`text-4xl mb-4 ${tech.cor}`} />
-                    <h3 className="text-lg font-semibold text-center text-gray-300 group-hover:text-blue-400 transition-colors">
-                      {tech.nome}
-                    </h3>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-black relative">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-fade-in-up">
-            Contribuições GitHub
-          </h2>
-          <div className="bg-gray-900/50 rounded-lg p-6 backdrop-blur-sm border border-gray-800 animate-fade-in-up">
-            <img
-              src="https://ghchart.rshah.org/regisamxjr"
-              alt="GitHub Contributions"
-              className="w-full h-auto rounded-lg"
-            />
-          </div>
-        </div>
-      </section>
+      
 
       <section className="py-20 bg-black relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent animate-fade-in-up">
             Estatísticas GitHub
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-900/50 rounded-lg p-6 backdrop-blur-sm border border-gray-800 animate-fade-in-up">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <div className="lg:col-span-2 bg-gray-900/50 rounded-lg p-3 backdrop-blur-sm border border-gray-800 animate-fade-in-up">
               <img
-                src="https://github-readme-stats.vercel.app/api?username=regisamxjr&show_icons=true&theme=dark&hide_border=true"
+                src="https://github-readme-stats.vercel.app/api?username=regisamxjr&show_icons=true&theme=dark&hide_border=true&include_all_commits=true&count_private=true&hide_rank=true&custom_title=Estatísticas"
                 alt="GitHub Stats"
                 className="w-full h-auto rounded-lg"
               />
             </div>
-            <div className="bg-gray-900/50 rounded-lg p-6 backdrop-blur-sm border border-gray-800 animate-fade-in-up">
+            <div className="bg-gray-900/50 rounded-lg p-3 backdrop-blur-sm border border-gray-800 animate-fade-in-up">
               <img
-                src="https://github-readme-stats.vercel.app/api/top-langs/?username=regisamxjr&layout=compact&theme=dark&hide_border=true"
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=regisamxjr&layout=compact&theme=dark&hide_border=true&langs_count=5&hide=html,css"
                 alt="Most Used Languages"
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+            <div className="lg:col-span-3 bg-gray-900/50 rounded-lg p-3 backdrop-blur-sm border border-gray-800 animate-fade-in-up">
+              <img
+                src="https://ghchart.rshah.org/regisamxjr"
+                alt="GitHub Contributions"
                 className="w-full h-auto rounded-lg"
               />
             </div>
