@@ -1,36 +1,44 @@
 import React from 'react';
 
+// Importando as imagens
+import pooImg from '../assets/certificados/poo.png';
+import reactjsImg from '../assets/certificados/reactjs.png';
+import webstartImg from '../assets/certificados/webstart.png';
+import versionamentoImg from '../assets/certificados/versionamento.png';
+import golangImg from '../assets/certificados/golang.png';
+import bancodedadosImg from '../assets/certificados/bancodedados.png';
+
 const Certificados = () => {
   const certificados = [
     {
       titulo: 'Programação Orientada a Objetos',
       instituicao: 'TIC em Trilhas',
-      imagem: 'src/assets/certificados/poo.png'
+      imagem: pooImg
     },
     {
       titulo: 'React + Vite',
       instituicao: 'TIC em Trilhas',
-      imagem: 'src/assets/certificados/reactjs.png'
+      imagem: reactjsImg
     },
     {
       titulo: 'Web Start ',
       instituicao: 'TIC em Trilhas',
-      imagem: 'src/assets/certificados/webstart.png'
+      imagem: webstartImg
     },
     {
       titulo: 'Versionamento de codigo',
       instituicao: 'Tic em Trilhas',
-      imagem: 'src/assets/certificados/versionamento.png'
+      imagem: versionamentoImg
     },
     {
       titulo: 'Golang',
       instituicao: 'Udemy',
-      imagem: 'src/assets/certificados/golang.png'
+      imagem: golangImg
     },
     {
       titulo: 'Banco de dados',
       instituicao: 'Tic em Trilhas',
-      imagem: 'src/assets/certificados/bancodedados.png'
+      imagem: bancodedadosImg
     }
   ];
 

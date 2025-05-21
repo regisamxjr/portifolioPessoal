@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaCode, FaDatabase, FaLightbulb, FaTools, FaUsers, FaSeedling } from 'react-icons/fa'
+import fotoPerfil from '../assets/img/fotoperfil.jpg'
 
 const Sobre = () => {
 
@@ -11,12 +12,11 @@ const Sobre = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8">
         <h1 className="text-4xl font-bold text-blue-400 text-center mb-16 mt-10">Minha Jornada</h1>
 
-        {/* Minha Jornada */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24 items-center max-w-5xl mx-auto">
           <div className="w-full flex justify-center">
             <div className="w-64 h-64 rounded-lg overflow-hidden shadow-lg">
               <img
-                src="src/assets/img/fotoperfil.jpg"
+                src={fotoPerfil}
                 alt="Régis Xavier"
                 className="object-cover w-full h-full"
               />
@@ -24,15 +24,16 @@ const Sobre = () => {
           </div>
           <div className="space-y-5">
             <p className="text-gray-300 leading-relaxed text-justify">
-              Minha jornada na área de tecnologia começou com uma paixão por criar soluções inovadoras.
-              Ao longo dos anos, desenvolvi expertise em desenvolvimento full stack, trabalhando com
-              diversas tecnologias e frameworks modernos.
+              Sou um estudante de Engenharia de Software na PUCRS, apaixonado
+por tecnologia e desenvolvimento de software. Possuo conhecimento
+avançado em Inglês e experiência prática com desenvolvimento web e
+mobile. Tenho perfil proativo, comunicativo e determinado, buscando
+sempre aprendizado contínuo e inovação. Atualmente, procuro uma
+oportunidade de estágio como desenvolvedor para aplicar meus
+conhecimentos e contribuir com soluções criativas e eficientes.
+
             </p>
-            <p className="text-gray-300 leading-relaxed text-justify">
-              Acredito que a tecnologia deve ser acessível e intuitiva, e busco sempre criar experiências
-              que façam a diferença na vida das pessoas. Atualmente, estou focado em desenvolver aplicações
-              web escaláveis e de alta performance.
-            </p>
+           
           </div>
         </div>
 

@@ -16,19 +16,19 @@ const Contato = () => {
             <div className="space-y-6">
               <a href="mailto:seu.email@exemplo.com" className="flex items-center space-x-4 text-gray-300 hover:text-blue-400 transition-colors">
                 <MdEmail className="text-blue-400" size={28} />
-                <span>seu.email@exemplo.com</span>
+                <span>regisamxjr@gmail.com</span>
               </a>
               <a href="tel:+5500000000000" className="flex items-center space-x-4 text-gray-300 hover:text-blue-400 transition-colors">
                 <MdPhone className="text-blue-400" size={28} />
-                <span>+55 (00) 00000-0000</span>
+                <span>+55 (51) 99746-9270</span>
               </a>
               <div className="flex items-center space-x-4 text-gray-300">
                 <MdLocationOn className="text-blue-400" size={28} />
-                <span>Sua Cidade, Estado - País</span>
+                <span>Porto Alegre, RS - Brasil</span>
               </div>
               <div className="flex justify-center space-x-8 pt-6">
                 <a
-                  href="https://github.com/seuusuario"
+                  href="https://github.com/regisamxjr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-blue-400 transition-colors transform hover:scale-110"
@@ -36,7 +36,7 @@ const Contato = () => {
                   <FaGithub size={32} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/seuusuario"
+                  href="https://linkedin.com/in/regis-junior"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-blue-400 transition-colors transform hover:scale-110"

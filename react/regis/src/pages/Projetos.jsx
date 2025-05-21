@@ -7,6 +7,16 @@ import {
   SiTailwindcss, SiMongodb, SiMysql
 } from 'react-icons/si';
 
+// Importando as imagens
+import portifolioImg from '../assets/img/portifolio.png';
+import apideclimaImg from '../assets/img/apideclima.png';
+import javafxImg from '../assets/img/javafx.png';
+import soccerhangmanImg from '../assets/img/soccerhangman.png';
+import enzobarberImg from '../assets/img/enzobarber.png';
+import cadosurfcampImg from '../assets/img/cadosurfcamp.png';
+import calculadoraImg from '../assets/img/calculadora.png';
+import cardapioImg from '../assets/img/cardapio-restaurante.png';
+
 const Projetos = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -20,8 +30,8 @@ const Projetos = () => {
         { nome: 'Tailwind', icon: SiTailwindcss, cor: '#06B6D4' },
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
-      imagem: 'src/assets/img/portifolio.png',
-      github: 'https://github.com/regisamxjr/portfolio',
+      imagem: portifolioImg,
+      github: 'https://github.com/regisamxjr/portfoliopessoal',
       demo: 'https://rxavier.netlify.app'
     },
     {
@@ -33,8 +43,8 @@ const Projetos = () => {
         { nome: 'CSS3', icon: FaCss3Alt, cor: '#1572B6' },
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
-      imagem: 'src/assets/img/apideclima.png',
-      github: 'https://github.com/seu-usuario/weather-controller',
+      imagem: apideclimaImg,
+      github: 'https://github.com/regisamxjr/apideclima',
       demo: '#'
     },
     {
@@ -44,7 +54,7 @@ const Projetos = () => {
       tecnologias: [
         { nome: 'Java', icon: FaJava, cor: '#007396' }
       ],
-      imagem: 'src/assets/img/javafx.png',
+      imagem: javafxImg,
       github: 'https://github.com/seu-usuario/transportes-javafx',
       demo: '#'
     },
@@ -57,7 +67,7 @@ const Projetos = () => {
         { nome: 'CSS3', icon: FaCss3Alt, cor: '#1572B6' },
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
-      imagem: 'src/assets/img/soccerhangman.png',
+      imagem: soccerhangmanImg,
       github: 'https://github.com/seu-usuario/soccer-hangman',
       demo: '#'
     },
@@ -70,7 +80,7 @@ const Projetos = () => {
         { nome: 'CSS3', icon: FaCss3Alt, cor: '#1572B6' },
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
-      imagem: 'src/assets/img/enzobarber.png',
+      imagem: enzobarberImg,
       github: 'https://github.com/seu-usuario/enzo-barbershop',
       demo: '#'
     },
@@ -83,7 +93,7 @@ const Projetos = () => {
         { nome: 'CSS3', icon: FaCss3Alt, cor: '#1572B6' },
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
-      imagem: 'src/assets/img/cadosurfcamp.png',
+      imagem: cadosurfcampImg,
       github: 'https://github.com/seu-usuario/cado-surfcamp',
       demo: '#'
     },
@@ -96,7 +106,7 @@ const Projetos = () => {
         { nome: 'CSS3', icon: FaCss3Alt, cor: '#1572B6' },
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
-      imagem: 'src/assets/img/calculadora.png',
+      imagem: calculadoraImg,
       github: 'https://github.com/seu-usuario/calculadora',
       demo: '#'
     },
@@ -109,7 +119,7 @@ const Projetos = () => {
         { nome: 'CSS3', icon: FaCss3Alt, cor: '#1572B6' },
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
-      imagem: 'src/assets/img/cardapio-restaurante.png',
+      imagem: cardapioImg,
       github: 'https://github.com/regisamxjr/moonight-cardapio',
       demo: '#'
     }
