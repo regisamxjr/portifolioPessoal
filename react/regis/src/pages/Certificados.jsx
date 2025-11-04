@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 // Importando as imagens
 import pooImg from '../assets/certificados/poo.png';
@@ -9,34 +10,36 @@ import golangImg from '../assets/certificados/golang.png';
 import bancodedadosImg from '../assets/certificados/bancodedados.png';
 
 const Certificados = () => {
+  const { t } = useLanguage();
+  
   const certificados = [
     {
-      titulo: 'Programação Orientada a Objetos',
+      titulo: t('certificadosData.poo'),
       instituicao: 'TIC em Trilhas',
       imagem: pooImg
     },
     {
-      titulo: 'React + Vite',
+      titulo: t('certificadosData.react'),
       instituicao: 'TIC em Trilhas',
       imagem: reactjsImg
     },
     {
-      titulo: 'Web Start ',
+      titulo: t('certificadosData.webstart'),
       instituicao: 'TIC em Trilhas',
       imagem: webstartImg
     },
     {
-      titulo: 'Versionamento de codigo',
+      titulo: t('certificadosData.versionamento'),
       instituicao: 'Tic em Trilhas',
       imagem: versionamentoImg
     },
     {
-      titulo: 'Golang',
+      titulo: t('certificadosData.golang'),
       instituicao: 'Udemy',
       imagem: golangImg
     },
     {
-      titulo: 'Banco de dados',
+      titulo: t('certificadosData.bancodedados'),
       instituicao: 'Tic em Trilhas',
       imagem: bancodedadosImg
     }
@@ -46,7 +49,7 @@ const Certificados = () => {
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32">
         <h1 className="mt-8 text-4xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent text-center">
-          Certificados
+          {t('certificados')}
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

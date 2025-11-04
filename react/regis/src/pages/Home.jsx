@@ -1,7 +1,9 @@
 import { FaJava, FaReact, FaCss3Alt, FaHtml5, FaDatabase, FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa';
 import { SiJavascript, SiTailwindcss, SiMongodb, SiC } from 'react-icons/si';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Home() {
+  const { t } = useLanguage();
   return (
     <>
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white flex flex-col items-center justify-center px-4 py-12">
@@ -11,10 +13,10 @@ export default function Home() {
           RÉGIS XAVIER 
         </h1>
         <h2 className="text-xl sm:text-2xl text-gray-300">
-          <span className="font-semibold text-white">SOFTWARE ENGINEER </span>
+          <span className="font-semibold text-white">{t('subtitle')} </span>
         </h2>
         <p className="text-blue-200 max-w-xl mx-auto">
-          Em busca do sucesso através do esforço e dedicação
+          {t('tagline')}
         </p>
       </div>
 
@@ -64,7 +66,7 @@ export default function Home() {
         className="absolute top-6 right-6 p-3 bg-gray-900 rounded-lg text-gray-400 hover:text-blue-400 hover:bg-gray-800 transition-all duration-300 flex items-center gap-2 cursor-pointer w-auto hover:scale-105"
       >
         <FaFileAlt size={20} className="hover:text-blue-400" />
-        <span className="whitespace-nowrap hover:text-blue-400">Currículo</span>
+        <span className="whitespace-nowrap hover:text-blue-400">{t('curriculo')}</span>
       </a>
     </div>
     

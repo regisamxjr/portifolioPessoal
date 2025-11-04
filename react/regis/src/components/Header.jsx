@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { FaBars, FaTimes, FaHome, FaUser, FaCode, FaEnvelope } from 'react-icons/fa'
 import { GiTrophy } from 'react-icons/gi'
+import { useLanguage } from '../context/LanguageContext'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
+  const { t, language, toggleLanguage } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,20 +20,18 @@ const Header = () => {
   }, [])
 
   const menuItems = [
-    { path: '/', label: 'Home', icon: FaHome },
-    { path: '/sobre', label: 'Sobre', icon: FaUser },
-    { path: '/projetos', label: 'Projetos', icon: FaCode },
-    { path: '/certificados', label: 'Certificados', icon: GiTrophy },
-    { path: '/contato', label: 'Contato', icon: FaEnvelope }
+    { path: '/', label: t('home'), icon: FaHome },
+    { path: '/sobre', label: t('sobre'), icon: FaUser },
+    { path: '/projetos', label: t('projetos'), icon: FaCode },
+    { path: '/certificados', label: t('certificados'), icon: GiTrophy },
+    { path: '/contato', label: t('contato'), icon: FaEnvelope }
   ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 mt-10">
       <nav className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
-        <div className="flex justify-center">
-          <div className={`hidden md:flex items-center space-x-6 px-6 py-2 rounded-full transition-all duration-300 ${
-            isScrolled ? 'bg-gray-900/90 backdrop-blur-md shadow-lg' : 'bg-gray-900/50 backdrop-blur-sm'
-          }`}>
+        <div className="flex justify-center items-center">
+          <div className="hidden md:flex items-center space-x-6 px-6 py-2 rounded-full transition-all duration-300">
             {menuItems.map((item) => {
               const Icon = item.icon
               return (
@@ -53,10 +53,23 @@ const Header = () => {
                   </div>
                 </Link>
               )
-            })}
+              })}
           </div>
+          
+          <button
+            onClick={toggleLanguage}
+            className="hidden md:flex group relative ml-6"
+          >
+            <div className="transition-all duration-300 text-gray-400 hover:text-blue-400 hover:scale-110 flex items-center justify-center">
+              <span className="text-xl leading-none">{language === 'pt' ? '🇺🇸' : '🇧🇷'}</span>
+            </div>
+            <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300"></div>
+            <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+              {language === 'pt' ? 'English' : 'Português'}
+            </div>
+          </button>
 
-          <div className="md:hidden flex items-center">
+          <div className="md:hidden flex items-center gap-4">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-400 hover:text-blue-400 focus:outline-none transition-colors duration-300"
@@ -87,6 +100,14 @@ const Header = () => {
                   </Link>
                 )
               })}
+              {/* Botão de Tradução no Menu Mobile */}
+              <button
+                onClick={toggleLanguage}
+                className="flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 text-gray-400 hover:text-blue-400 hover:bg-gray-800 w-full"
+              >
+                <span className="text-lg">{language === 'pt' ? '🇺🇸' : '🇧🇷'}</span>
+                <span>{language === 'pt' ? 'English' : 'Português'}</span>
+              </button>
             </div>
           </div>
         )}

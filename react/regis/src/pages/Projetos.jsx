@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import {
   FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaJava, FaHtml5,
   FaCss3Alt, FaJs, FaGitAlt
 } from 'react-icons/fa';
 import {
-  SiTailwindcss, SiMongodb, SiMysql
+  SiTailwindcss, SiMongodb, SiMysql, SiPostgresql, SiExpress
 } from 'react-icons/si';
+import { useLanguage } from '../context/LanguageContext';
 
 // Importando as imagens
 import portifolioImg from '../assets/img/portifolio.png';
@@ -16,15 +17,18 @@ import enzobarberImg from '../assets/img/enzobarber.png';
 import cadosurfcampImg from '../assets/img/cadosurfcamp.png';
 import calculadoraImg from '../assets/img/calculadora.png';
 import cardapioImg from '../assets/img/cardapio-restaurante.png';
+import lifveImg from '../assets/img/lifve.png';
+import veraxImg from '../assets/img/verax.png';
 
 const Projetos = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const { t } = useLanguage();
 
-  const projetos = [
+  const projetos = useMemo(() => [
     {
-      titulo: 'Portfólio Pessoal',
-      descricao: 'Portfólio moderno desenvolvido com React e Tailwind CSS.',
-      descricaoCompleta: 'Portfólio profissional com design responsivo, utilizando React, JavaScript e Tailwind CSS, com animações suaves e interações dinâmicas.',
+      titulo: t('projetosData.portfolio.titulo'),
+      descricao: t('projetosData.portfolio.descricao'),
+      descricaoCompleta: t('projetosData.portfolio.descricaoCompleta'),
       tecnologias: [
         { nome: 'React', icon: FaReact, cor: '#61DAFB' },
         { nome: 'Tailwind', icon: SiTailwindcss, cor: '#06B6D4' },
@@ -35,9 +39,9 @@ const Projetos = () => {
       demo: 'https://rxavier.netlify.app'
     },
     {
-      titulo: 'Weather Global Controller',
-      descricao: 'Controle de temperatura mundial com API OpenWeather.',
-      descricaoCompleta: 'Plataforma que exibe o clima ao vivo de cidades ao redor do mundo, usando HTML, CSS, JavaScript e API OpenWeather.',
+      titulo: t('projetosData.weather.titulo'),
+      descricao: t('projetosData.weather.descricao'),
+      descricaoCompleta: t('projetosData.weather.descricaoCompleta'),
       tecnologias: [
         { nome: 'HTML5', icon: FaHtml5, cor: '#E34F26' },
         { nome: 'CSS3', icon: FaCss3Alt, cor: '#1572B6' },
@@ -48,20 +52,36 @@ const Projetos = () => {
       demo: '#'
     },
     {
-      titulo: 'Controle de Transportes',
-      descricao: 'Sistema desktop com JavaFX.',
-      descricaoCompleta: 'Aplicativo JavaFX para gerenciamento de transportes cadastrados, com interface intuitiva e foco em controle logístico.',
+      titulo: t('projetosData.lifve.titulo'),
+      descricao: t('projetosData.lifve.descricao'),
+      descricaoCompleta: t('projetosData.lifve.descricaoCompleta'),
       tecnologias: [
-        { nome: 'Java', icon: FaJava, cor: '#007396' }
+        { nome: 'React', icon: FaReact, cor: '#61DAFB' },
+        { nome: 'Tailwind CSS', icon: SiTailwindcss, cor: '#06B6D4' },
+        { nome: 'PostgreSQL', icon: SiPostgresql, cor: '#336791' },
+        { nome: 'Node.js', icon: FaNodeJs, cor: '#339933' },
+        { nome: 'Express', icon: SiExpress, cor: '#FFFFFF' },
       ],
-      imagem: javafxImg,
-      github: 'https://github.com/seu-usuario/transportes-javafx',
+      imagem: lifveImg,
+      github: 'https://github.com/regisamxjr/lifve',
       demo: '#'
     },
     {
-      titulo: 'Soccer Hangman',
-      descricao: 'Jogo de adivinhação de times de futebol.',
-      descricaoCompleta: 'Jogo estilo forca com nomes de clubes de futebol mundial. Feito com HTML, CSS e JavaScript, inspirado no jogo Termo.',
+      titulo: t('projetosData.verax.titulo'),
+      descricao: t('projetosData.verax.descricao'),
+      descricaoCompleta: t('projetosData.verax.descricaoCompleta'),
+      tecnologias: [
+        { nome: 'React', icon: FaReact, cor: '#61DAFB' },
+        { nome: 'Tailwind CSS', icon: SiTailwindcss, cor: '#06B6D4' },
+      ],
+      imagem: veraxImg,
+      github: 'https://github.com/regisamxjr/verax',
+      demo: '#'
+    },
+    {
+      titulo: t('projetosData.soccer.titulo'),
+      descricao: t('projetosData.soccer.descricao'),
+      descricaoCompleta: t('projetosData.soccer.descricaoCompleta'),
       tecnologias: [
         { nome: 'HTML5', icon: FaHtml5, cor: '#E34F26' },
         { nome: 'CSS3', icon: FaCss3Alt, cor: '#1572B6' },
@@ -72,9 +92,9 @@ const Projetos = () => {
       demo: '#'
     },
     {
-      titulo: 'Enzo Barbershop',
-      descricao: 'Site institucional de barbearia.',
-      descricaoCompleta: 'Landing page elegante e moderna de uma barbearia fictícia. Desenvolvido com HTML, CSS e JavaScript.',
+      titulo: t('projetosData.enzo.titulo'),
+      descricao: t('projetosData.enzo.descricao'),
+      descricaoCompleta: t('projetosData.enzo.descricaoCompleta'),
       tecnologias: [
         { nome: 'HTML5', icon: FaHtml5, cor: '#E34F26' },
         { nome: 'CSS3', icon: FaCss3Alt, cor: '#1572B6' },
@@ -85,9 +105,9 @@ const Projetos = () => {
       demo: '#'
     },
     {
-      titulo: 'Cado SurfCamp',
-      descricao: 'Site para hospedagem em Garopaba.',
-      descricaoCompleta: 'Landing page de uma cabana de surf na praia de Garopaba, com fotos, descrição dos serviços e formulário.',
+      titulo: t('projetosData.cado.titulo'),
+      descricao: t('projetosData.cado.descricao'),
+      descricaoCompleta: t('projetosData.cado.descricaoCompleta'),
       tecnologias: [
         { nome: 'HTML5', icon: FaHtml5, cor: '#E34F26' },
         { nome: 'CSS3', icon: FaCss3Alt, cor: '#1572B6' },
@@ -98,9 +118,21 @@ const Projetos = () => {
       demo: '#'
     },
     {
-      titulo: 'Calculadora',
-      descricao: 'Calculadora funcional com design moderno.',
-      descricaoCompleta: 'Calculadora web com funcionalidades básicas, layout responsivo e estilização com CSS moderno.',
+      titulo: t('projetosData.transportes.titulo'),
+      descricao: t('projetosData.transportes.descricao'),
+      descricaoCompleta: t('projetosData.transportes.descricaoCompleta'),
+      tecnologias: [
+        { nome: 'Java', icon: FaJava, cor: '#007396' }
+      ],
+      imagem: javafxImg,
+      github: 'https://github.com/seu-usuario/transportes-javafx',
+      demo: '#'
+    },
+    
+    {
+      titulo: t('projetosData.calculadora.titulo'),
+      descricao: t('projetosData.calculadora.descricao'),
+      descricaoCompleta: t('projetosData.calculadora.descricaoCompleta'),
       tecnologias: [
         { nome: 'HTML5', icon: FaHtml5, cor: '#E34F26' },
         { nome: 'CSS3', icon: FaCss3Alt, cor: '#1572B6' },
@@ -111,9 +143,9 @@ const Projetos = () => {
       demo: '#'
     },
     {
-      titulo: 'Moonight Cardápio',
-      descricao: 'Cardápio digital de restaurante fictício.',
-      descricaoCompleta: 'Projeto fictício de cardápio online com design escuro, navegação fluida e foco na experiência do usuário.',
+      titulo: t('projetosData.cardapio.titulo'),
+      descricao: t('projetosData.cardapio.descricao'),
+      descricaoCompleta: t('projetosData.cardapio.descricaoCompleta'),
       tecnologias: [
         { nome: 'HTML5', icon: FaHtml5, cor: '#E34F26' },
         { nome: 'CSS3', icon: FaCss3Alt, cor: '#1572B6' },
@@ -123,13 +155,13 @@ const Projetos = () => {
       github: 'https://github.com/regisamxjr/moonight-cardapio',
       demo: '#'
     }
-  ];
+  ], [t]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32">
         <h1 className="mt-8 text-4xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent text-center">
-          Projetos
+          {t('projetos')}
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -177,20 +209,20 @@ const Projetos = () => {
       </div>
 
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div 
+          className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div 
+            className="bg-gray-900 rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="relative">
               <img
                 src={selectedProject.imagem}
                 alt={selectedProject.titulo}
                 className="w-full h-64 object-cover"
               />
-              <button
-                onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-colors"
-              >
-                ✕
-              </button>
             </div>
             <div className="p-6">
               <h2 className="text-2xl font-bold mb-4">{selectedProject.titulo}</h2>
@@ -209,11 +241,11 @@ const Projetos = () => {
               <div className="flex space-x-4">
                 <a href={selectedProject.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
                   <FaGithub />
-                  Ver no GitHub
+                  {t('verNoGitHub')}
                 </a>
                 <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                   <FaExternalLinkAlt />
-                  Ver Demo
+                  {t('verDemo')}
                 </a>
               </div>
             </div>
