@@ -1,4 +1,4 @@
-import { FaJava, FaReact, FaCss3Alt, FaHtml5, FaDatabase, FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa';
+import { FaJava, FaReact, FaCss3Alt, FaHtml5, FaDatabase, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiJavascript, SiTailwindcss, SiMongodb, SiC } from 'react-icons/si';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -58,16 +58,6 @@ export default function Home() {
           <span className="sr-only">SQL</span>
         </div>
       </div>
-
-      <a
-        href="/curriculo.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="absolute top-6 right-6 p-3 bg-gray-900 rounded-lg text-gray-400 hover:text-blue-400 hover:bg-gray-800 transition-all duration-300 flex items-center gap-2 cursor-pointer w-auto hover:scale-105"
-      >
-        <FaFileAlt size={20} className="hover:text-blue-400" />
-        <span className="whitespace-nowrap hover:text-blue-400">{t('curriculo')}</span>
-      </a>
     </div>
     
    </>
