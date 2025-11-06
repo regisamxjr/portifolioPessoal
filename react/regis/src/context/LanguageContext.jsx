@@ -103,6 +103,16 @@ export const LanguageProvider = ({ children }) => {
           titulo: 'Moonight Cardápio',
           descricao: 'Cardápio digital de restaurante fictício.',
           descricaoCompleta: 'Projeto fictício de cardápio online com design escuro, navegação fluida e foco na experiência do usuário.'
+        },
+        manejoEstresse: {
+          titulo: 'Projeto Programa Manejo de Estresse',
+          descricao: 'Programa de atividades para aliviar o estresse, regulamentado pela OMS',
+          descricaoCompleta: 'Programa Manejo de Estresse, projeto real criado por um grupo de alunos da universidade da PUCRS, por meio da Agência Experimental de Engenharia de Software, com objetivo de ajudar pessoas a aliviar o estresse de forma saudável e interativa.'
+        },
+        seDoceFosse: {
+          titulo: 'Projeto Se Doce Fosse',
+          descricao: 'Projeto acadêmico de e-commerce de doces',
+          descricaoCompleta: 'Projeto acadêmico de e-commerce de doces, realizado em grupo no curso de Engenharia de Software na PUCRS, por meio da Agência Experimental de Engenharia de Software, com objetivo de tornar a venda de doces mais fácil e eficiente.'
         }
       },
       // Certificados
@@ -198,6 +208,16 @@ export const LanguageProvider = ({ children }) => {
           titulo: 'Moonight Menu',
           descricao: 'Digital menu for fictional restaurant.',
           descricaoCompleta: 'Fictional online menu project with dark design, fluid navigation and focus on user experience.'
+        },
+        manejoEstresse: {
+          titulo: 'Stress Management Program Project',
+          descricao: 'Activity program to relieve stress, regulated by the WHO',
+          descricaoCompleta: 'Stress Management Program, a real project created by a group of students from PUCRS University, through the Experimental Software Engineering Agency, with the aim of helping people relieve stress in a healthy and interactive way.'
+        },
+        seDoceFosse: {
+          titulo: 'Se Doce Fosse Project',
+          descricao: 'Academic e-commerce project for sweets',
+          descricaoCompleta: 'Academic e-commerce project for sweets, carried out in a group in the Software Engineering course at PUCRS, through the Experimental Software Engineering Agency, with the aim of making the sale of sweets easier and more efficient.'
         }
       },
       // Certificados

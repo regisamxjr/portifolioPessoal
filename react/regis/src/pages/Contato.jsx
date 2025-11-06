@@ -7,8 +7,8 @@ const Contato = () => {
   const { t } = useLanguage();
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32">
-        <h1 className="mt-8 text-4xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent text-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+        <h1 className="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent text-center">
           {t('contato')}
         </h1>
 

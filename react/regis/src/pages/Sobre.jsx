@@ -16,9 +16,9 @@ const Sobre = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <h1 className="text-4xl font-bold text-blue-400 text-center mb-16 mt-10">{t('minhaJornada')}</h1>
+    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+        <h1 className="text-4xl font-bold text-blue-400 text-center mb-16">{t('minhaJornada')}</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24 items-center max-w-5xl mx-auto">
           <div className="w-full flex justify-center">

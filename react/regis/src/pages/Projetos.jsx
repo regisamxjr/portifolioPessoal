@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaJava, FaHtml5,
   FaCss3Alt, FaJs, FaGitAlt
@@ -8,7 +8,6 @@ import {
 } from 'react-icons/si';
 import { useLanguage } from '../context/LanguageContext';
 
-// Importando as imagens
 import portifolioImg from '../assets/img/portifolio.png';
 import apideclimaImg from '../assets/img/apideclima.png';
 import javafxImg from '../assets/img/javafx.png';
@@ -19,9 +18,17 @@ import calculadoraImg from '../assets/img/calculadora.png';
 import cardapioImg from '../assets/img/cardapio-restaurante.png';
 import lifveImg from '../assets/img/lifve.png';
 import veraxImg from '../assets/img/verax.png';
+import programaManejoDeEstresseImg from '../assets/img/manejodeestresse.png';
+import logoLumiarImg from '../assets/img/logomanejo.png';
+import timemanejoImg from '../assets/img/time-manejodeestresse.png';
+import seDoceFosseImg from '../assets/img/sedocefosse.png';
+import logoSeDoceFosseImg from '../assets/img/logosedocefosse.png';
+import timeSeDoceFosseImg from '../assets/img/timesedocefosse.png';
 
 const Projetos = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [imageIndices, setImageIndices] = useState({});
+  const [hoveredProjectIndex, setHoveredProjectIndex] = useState(null);
   const { t } = useLanguage();
 
   const projetos = useMemo(() => [
@@ -35,8 +42,41 @@ const Projetos = () => {
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
       imagem: portifolioImg,
+      imagens: [portifolioImg], 
       github: 'https://github.com/regisamxjr/portfoliopessoal',
       demo: 'https://rxavier.netlify.app'
+    },
+   
+    {
+      titulo: t('projetosData.manejoEstresse.titulo'),
+      descricao: t('projetosData.manejoEstresse.descricao'),
+      descricaoCompleta: t('projetosData.manejoEstresse.descricaoCompleta'),
+      tecnologias: [
+        { nome: 'React', icon: FaReact, cor: '#61DAFB' },
+        { nome: 'Tailwind', icon: SiTailwindcss, cor: '#06B6D4' },
+        { nome: 'Java Spring Boot', icon: FaJava, cor: '#007396' },
+        { nome: 'PostgreSQL', icon: SiPostgresql, cor: '#336791' }
+      ],
+      imagem: programaManejoDeEstresseImg,
+      imagens: [programaManejoDeEstresseImg, logoLumiarImg, timemanejoImg], 
+      github: '',
+      demo: '#'
+    },
+    {
+      titulo: t('projetosData.seDoceFosse.titulo'),
+      descricao: t('projetosData.seDoceFosse.descricao'),
+      descricaoCompleta: t('projetosData.seDoceFosse.descricaoCompleta'),
+      tecnologias: [
+        { nome: 'React', icon: FaReact, cor: '#61DAFB' },
+        { nome: 'Tailwind', icon: SiTailwindcss, cor: '#06B6D4' },
+        { nome: 'Java Spring Boot', icon: FaJava, cor: '#007396' },
+        { nome: 'PostgreSQL', icon: SiPostgresql, cor: '#336791' },
+        { nome: 'MongoDB', icon: SiMongodb, cor: '#4DB33D' }
+      ],
+      imagem: seDoceFosseImg,
+      imagens: [seDoceFosseImg, logoSeDoceFosseImg, timeSeDoceFosseImg], 
+      github: '',
+      demo: '#'
     },
     {
       titulo: t('projetosData.weather.titulo'),
@@ -48,7 +88,8 @@ const Projetos = () => {
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
       imagem: apideclimaImg,
-      github: 'https://github.com/regisamxjr/apideclima',
+      imagens: [apideclimaImg],
+      github: 'https://github.com/regisamxjr/weather-global-controller',
       demo: '#'
     },
     {
@@ -63,6 +104,7 @@ const Projetos = () => {
         { nome: 'Express', icon: SiExpress, cor: '#FFFFFF' },
       ],
       imagem: lifveImg,
+      imagens: [lifveImg],
       github: 'https://github.com/regisamxjr/lifve',
       demo: '#'
     },
@@ -75,6 +117,7 @@ const Projetos = () => {
         { nome: 'Tailwind CSS', icon: SiTailwindcss, cor: '#06B6D4' },
       ],
       imagem: veraxImg,
+      imagens: [veraxImg],
       github: 'https://github.com/regisamxjr/verax',
       demo: '#'
     },
@@ -88,6 +131,7 @@ const Projetos = () => {
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
       imagem: soccerhangmanImg,
+      imagens: [soccerhangmanImg],
       github: 'https://github.com/seu-usuario/soccer-hangman',
       demo: '#'
     },
@@ -101,6 +145,7 @@ const Projetos = () => {
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
       imagem: enzobarberImg,
+      imagens: [enzobarberImg],
       github: 'https://github.com/seu-usuario/enzo-barbershop',
       demo: '#'
     },
@@ -114,6 +159,7 @@ const Projetos = () => {
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
       imagem: cadosurfcampImg,
+      imagens: [cadosurfcampImg],
       github: 'https://github.com/seu-usuario/cado-surfcamp',
       demo: '#'
     },
@@ -125,6 +171,7 @@ const Projetos = () => {
         { nome: 'Java', icon: FaJava, cor: '#007396' }
       ],
       imagem: javafxImg,
+      imagens: [javafxImg],
       github: 'https://github.com/seu-usuario/transportes-javafx',
       demo: '#'
     },
@@ -139,6 +186,7 @@ const Projetos = () => {
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
       imagem: calculadoraImg,
+      imagens: [calculadoraImg],
       github: 'https://github.com/seu-usuario/calculadora',
       demo: '#'
     },
@@ -152,15 +200,49 @@ const Projetos = () => {
         { nome: 'JavaScript', icon: FaJs, cor: '#F7DF1E' }
       ],
       imagem: cardapioImg,
+      imagens: [cardapioImg],
       github: 'https://github.com/regisamxjr/moonight-cardapio',
       demo: '#'
     }
   ], [t]);
 
+  useEffect(() => {
+    const initialIndices = {};
+    projetos.forEach((projeto, index) => {
+      if (projeto.imagens && projeto.imagens.length > 1) {
+        initialIndices[index] = 0;
+      }
+    });
+    setImageIndices(initialIndices);
+  }, [projetos]);
+
+  useEffect(() => {
+    if (hoveredProjectIndex === null) {
+      return;
+    }
+
+    const projeto = projetos[hoveredProjectIndex];
+    if (!projeto || !projeto.imagens || projeto.imagens.length <= 1) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setImageIndices((prev) => {
+        const currentIndex = prev[hoveredProjectIndex] || 0;
+        return {
+          ...prev,
+          [hoveredProjectIndex]: (currentIndex + 1) % projeto.imagens.length
+        };
+      });
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [hoveredProjectIndex, projetos]);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32">
-        <h1 className="mt-8 text-4xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent text-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+        <h1 className="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent text-center">
           {t('projetos')}
         </h1>
 
@@ -169,14 +251,30 @@ const Projetos = () => {
             <div
               key={index}
               onClick={() => setSelectedProject(projeto)}
+              onMouseEnter={() => {
+                if (projeto.imagens && projeto.imagens.length > 1) {
+                  setHoveredProjectIndex(index);
+                }
+              }}
+              onMouseLeave={() => {
+                setHoveredProjectIndex(null);
+              }}
               className="group relative bg-gray-900/50 backdrop-blur-sm rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500 transition-all duration-300 cursor-pointer hover:-translate-y-1"
             >
-              <div className="aspect-w-16 aspect-h-9">
-                <img
-                  src={projeto.imagem}
-                  alt={projeto.titulo}
-                  className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-                />
+              <div className="aspect-w-16 aspect-h-9 relative overflow-hidden">
+                {projeto.imagens && projeto.imagens.length > 1 ? (
+                  <img
+                    src={projeto.imagens[imageIndices[index] || 0]}
+                    alt={projeto.titulo}
+                    className="object-cover w-full h-full group-hover:scale-105 transition-all duration-500"
+                  />
+                ) : (
+                  <img
+                    src={projeto.imagem}
+                    alt={projeto.titulo}
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                  />
+                )}
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-200 mb-2">

@@ -28,10 +28,13 @@ const Header = () => {
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 mt-10">
-      <nav className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gradient-to-b from-black via-gray-950 to-gray-950 ${
+      isScrolled ? 'shadow-xl' : 'shadow-lg'
+    }`}>
+      <div className={`absolute inset-0 ${isScrolled ? 'bg-black/55' : 'bg-black/40'} backdrop-blur-md pointer-events-none transition-all duration-300`}></div>
+      <nav className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-4 rounded-b-3xl">
         <div className="flex justify-center items-center">
-          <div className="hidden md:flex items-center space-x-6 px-6 py-2 rounded-full transition-all duration-300">
+          <div className="hidden md:flex items-center space-x-6 px-6 py-2 rounded-full bg-blue-950/80 shadow-md transition-all duration-300">
             {menuItems.map((item) => {
               const Icon = item.icon
               return (
@@ -80,7 +83,7 @@ const Header = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-gray-900/95 backdrop-blur-md shadow-lg animate-fadeIn rounded-lg mt-2">
+          <div className="md:hidden absolute top-16 left-4 right-4 bg-blue-950/95 backdrop-blur-md shadow-lg animate-fadeIn rounded-3xl mt-2 border border-blue-900/70">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {menuItems.map((item) => {
                 const Icon = item.icon

@@ -1,12 +1,23 @@
+import { useEffect } from 'react';
 import { FaJava, FaReact, FaCss3Alt, FaHtml5, FaDatabase, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiJavascript, SiTailwindcss, SiMongodb, SiC } from 'react-icons/si';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Home() {
   const { t } = useLanguage();
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = previousOverflow || '';
+    };
+  }, []);
+
   return (
     <>
-    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white flex flex-col items-center justify-center px-4 py-12">
+    <div className="h-screen bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white flex flex-col items-center justify-center px-4 pt-32 pb-12 overflow-hidden">
       {/* Bloco de Texto com Animação */}
       <div className="text-center space-y-4 opacity-0 animate-fade-in-up">
         <h1 className="text-4xl sm:text-6xl font-bold text-blue-400">
@@ -20,7 +31,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center gap-8 mt-16 max-w-4xl mx-auto">
+      <div className="flex flex-wrap justify-center items-center gap-8 mt-12 max-w-4xl mx-auto">
         <div className="flex flex-col items-center opacity-0 animate-fade-in-up delay-[200ms] transform hover:scale-110 transition-transform duration-300">
           <FaJava title="Java" className="text-5xl text-red-600 hover:text-white transition" />
           <span className="sr-only">Java</span>
