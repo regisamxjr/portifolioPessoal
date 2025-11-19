@@ -27,19 +27,16 @@ export const LanguageProvider = ({ children }) => {
 
   const translations = {
     pt: {
-      // Header
       home: 'Home',
       sobre: 'Sobre',
       projetos: 'Projetos',
       certificados: 'Certificados',
       contato: 'Contato',
-      // Home
       subtitle: 'SOFTWARE ENGINEER',
       tagline: 'Em busca do sucesso através do esforço e dedicação',
       curriculo: 'Currículo',
-      // Sobre
       minhaJornada: 'Minha Jornada',
-      sobreText: 'Sou um estudante de Engenharia de Software na PUCRS, apaixonado por tecnologia e desenvolvimento de software. Possuo conhecimento avançado em Inglês e experiência prática com desenvolvimento web e mobile. Tenho perfil proativo, comunicativo e determinado, buscando sempre aprendizado contínuo e inovação. Atualmente, procuro uma oportunidade de estágio como desenvolvedor para aplicar meus conhecimentos e contribuir com soluções criativas e eficientes.',
+      sobreText: 'Sou um estudante de Engenharia de Software na PUCRS, apaixonado por tecnologia e desenvolvimento de software. Possuo conhecimento avançado em Inglês e atualmente aprendendo alemão. Tenho perfil proativo, comunicativo e determinado, buscando sempre aprendizado contínuo e inovação. Atualmente, me dedico para aumentar cada dia mais a minha experiência profissional e me tornar um desenvolvedor mais capacitado.',
       competencias: 'Competências',
       softSkills: {
         proativo: 'Proativo',
@@ -50,7 +47,17 @@ export const LanguageProvider = ({ children }) => {
         entrega: 'Rápida Entrega'
       },
       mindset: 'Mindset',
-      // Projetos
+      experienciaProfissional: 'Experiência Profissional',
+      experienciaData: {
+        experiencia1: {
+          titulo: 'Desenvolvedor Junior Full Stack',
+          empresa: 'Supernova',
+          periodo: 'Julho 2025 - Presente',
+          descricao: 'Desenvolvimento de sistemas integradas com chatbot e IA',
+          tecnologias: 'React, Node.js, PostgreSQL, Git'
+        },
+        
+      },
       verNoGitHub: 'Ver no GitHub',
       verDemo: 'Ver Demo',
       projetosData: {
@@ -144,7 +151,7 @@ export const LanguageProvider = ({ children }) => {
       curriculo: 'Resume',
       // Sobre
       minhaJornada: 'My Journey',
-      sobreText: 'I am a Software Engineering student at PUCRS, passionate about technology and software development. I have advanced knowledge in English and practical experience with web and mobile development. I have a proactive, communicative, and determined profile, always seeking continuous learning and innovation. Currently, I am looking for an internship opportunity as a developer to apply my knowledge and contribute with creative and efficient solutions.',
+      sobreText: 'I am a Software Engineering student at PUCRS, passionate about technology and software development. I have advanced knowledge in English and am currently learning German. I have a proactive, communicative, and determined profile, always seeking continuous learning and innovation. Currently, I dedicate myself to increasing my professional experience every day and becoming a more qualified developer.',
       competencias: 'Competencies',
       softSkills: {
         proativo: 'Proactive',
@@ -155,6 +162,16 @@ export const LanguageProvider = ({ children }) => {
         entrega: 'Fast Delivery'
       },
       mindset: 'Mindset',
+      experienciaProfissional: 'Professional Experience',
+      experienciaData: {
+        experiencia1: {
+          titulo: 'Junior Full Stack Developer',
+          empresa: 'Supernova',
+          periodo: 'July 2025 - Present',
+          descricao: 'Development of integrated systems with chatbot and AI',
+          tecnologias: 'React, Node.js, PostgreSQL, Git'
+        }
+      },
       // Projetos
       verNoGitHub: 'View on GitHub',
       verDemo: 'View Demo',
