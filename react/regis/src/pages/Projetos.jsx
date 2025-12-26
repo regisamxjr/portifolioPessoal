@@ -24,7 +24,9 @@ import timemanejoImg from '../assets/img/time-manejodeestresse.png';
 import seDoceFosseImg from '../assets/img/sedocefosse.png';
 import logoSeDoceFosseImg from '../assets/img/logosedocefosse.png';
 import timeSeDoceFosseImg from '../assets/img/timesedocefosse.png';
-
+import calculadoraJurosImg from '../assets/img/juroscompostos.png';
+import graficoEvolucaoImg from '../assets/img/graficoevolucao.png';
+import tabelaEvolucaoImg from '../assets/img/tabelaevolucao.png';
 const Projetos = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [imageIndices, setImageIndices] = useState({});
@@ -76,6 +78,20 @@ const Projetos = () => {
       imagem: seDoceFosseImg,
       imagens: [seDoceFosseImg, logoSeDoceFosseImg, timeSeDoceFosseImg], 
       github: '',
+      demo: '#'
+    },
+    {
+      titulo: t('projetosData.calculadoraJuros.titulo'),
+      descricao: t('projetosData.calculadoraJuros.descricao'),
+      descricaoCompleta: t('projetosData.calculadoraJuros.descricaoCompleta'),
+      tecnologias: [
+        { nome: 'React', icon: FaReact, cor: '#61DAFB' },
+        { nome: 'Tailwind', icon: SiTailwindcss, cor: '#06B6D4' },
+        { nome: 'TypeScript', icon: FaJs, cor: '#F7DF1E' }
+      ],
+      imagem: calculadoraJurosImg,
+      imagens: [calculadoraJurosImg, graficoEvolucaoImg, tabelaEvolucaoImg],
+      github: 'https://github.com/regisamxjr/juros-compostos',
       demo: '#'
     },
     {
@@ -190,6 +206,7 @@ const Projetos = () => {
       github: 'https://github.com/seu-usuario/calculadora',
       demo: '#'
     },
+    
     {
       titulo: t('projetosData.cardapio.titulo'),
       descricao: t('projetosData.cardapio.descricao'),

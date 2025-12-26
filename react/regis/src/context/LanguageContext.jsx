@@ -106,6 +106,11 @@ export const LanguageProvider = ({ children }) => {
           descricao: 'Calculadora funcional com design moderno.',
           descricaoCompleta: 'Calculadora web com funcionalidades básicas, layout responsivo e estilização com CSS moderno.'
         },
+        calculadoraJuros: {
+          titulo: 'Calculadora de Juros Compostos',
+          descricao: 'Calculadora de juros compostos com gráfico e tabela para o acompanhamento do rendimento mensalmente.',
+          descricaoCompleta: 'Aplicação web para calcular juros compostos com gráfico e tabela para o acompanhamento do rendimento mensalmente. Permite calcular o valor futuro de investimentos com diferentes taxas e períodos, visualizando a evolução do investimento ao longo do tempo. Desenvolvido com HTML, CSS e JavaScript.'
+        },
         cardapio: {
           titulo: 'Moonight Cardápio',
           descricao: 'Cardápio digital de restaurante fictício.',
@@ -220,6 +225,11 @@ export const LanguageProvider = ({ children }) => {
           titulo: 'Calculator',
           descricao: 'Functional calculator with modern design.',
           descricaoCompleta: 'Web calculator with basic functionality, responsive layout and modern CSS styling.'
+        },
+        calculadoraJuros: {
+          titulo: 'Compound Interest Calculator',
+          descricao: 'Compound interest calculator with chart and table for monthly return tracking.',
+          descricaoCompleta: 'Web application to calculate compound interest with chart and table for monthly return tracking. Allows you to calculate the future value of investments with different rates and periods, visualizing the investment evolution over time. Developed with HTML, CSS and JavaScript.'
         },
         cardapio: {
           titulo: 'Moonight Menu',
