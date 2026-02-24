@@ -6,18 +6,9 @@ import { useLanguage } from '../context/LanguageContext';
 export default function Home() {
   const { t } = useLanguage();
 
-  useEffect(() => {
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-
-    return () => {
-      document.body.style.overflow = previousOverflow || '';
-    };
-  }, []);
-
   return (
     <>
-    <div className="h-screen bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white flex flex-col items-center justify-center px-4 pt-32 pb-12 overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-gray-950 text-white flex flex-col items-center justify-center px-4 pt-32 pb-12 overflow-x-hidden">
       {/* Bloco de Texto com Animação */}
       <div className="text-center space-y-4 opacity-0 animate-fade-in-up">
         <h1 className="text-4xl sm:text-6xl font-bold text-blue-400">

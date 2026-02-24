@@ -28,6 +28,7 @@ export const LanguageProvider = ({ children }) => {
       home: 'Home',
       sobre: 'Sobre',
       projetos: 'Projetos',
+      intercambio: 'Intercâmbio',
       certificados: 'Certificados',
       contato: 'Contato',
       subtitle: 'SOFTWARE ENGINEER',
@@ -46,6 +47,21 @@ export const LanguageProvider = ({ children }) => {
       },
       mindset: 'Mindset',
       experienciaProfissional: 'Experiência Profissional',
+      educacao: 'Educação',
+      educacaoData: {
+        edu1: {
+          instituicao: 'Uppsala University',
+          curso: 'Ciência da Computação',
+          periodo: '2025 - 2026',
+          descricao: 'Intercâmbio acadêmico na Suécia, focado em Ciência da Computação.'
+        },
+        edu2: {
+          instituicao: 'PUCRS',
+          curso: 'Engenharia de Software',
+          periodo: '2022 - Presente',
+          descricao: 'Bacharelado em Engenharia de Software.'
+        }
+      },
       experienciaData: {
         experiencia1: {
           titulo: 'Desenvolvedor Junior Full Stack',
@@ -105,7 +121,7 @@ export const LanguageProvider = ({ children }) => {
           descricaoCompleta: 'Calculadora web com funcionalidades básicas, layout responsivo e estilização com CSS moderno.'
         },
         calculadoraJuros: {
-          titulo: 'Calculadora de Juros Compostos',
+          titulo: 'Planinvest',
           descricao: 'Calculadora de juros compostos com gráfico e tabela para o acompanhamento do rendimento mensalmente.',
           descricaoCompleta: 'Aplicação web para calcular juros compostos com gráfico e tabela para o acompanhamento do rendimento mensalmente. Permite calcular o valor futuro de investimentos com diferentes taxas e períodos, visualizando a evolução do investimento ao longo do tempo. Desenvolvido com HTML, CSS e JavaScript.'
         },
@@ -151,6 +167,7 @@ export const LanguageProvider = ({ children }) => {
       home: 'Home',
       sobre: 'About',
       projetos: 'Projects',
+      intercambio: 'Exchange Studies',
       certificados: 'Certificates',
       contato: 'Contact',
       // Home
@@ -171,6 +188,21 @@ export const LanguageProvider = ({ children }) => {
       },
       mindset: 'Mindset',
       experienciaProfissional: 'Professional Experience',
+      educacao: 'Education',
+      educacaoData: {
+        edu1: {
+          instituicao: 'Uppsala University',
+          curso: 'Computer Science',
+          periodo: '2025 - 2026',
+          descricao: 'Academic exchange in Sweden, focused on Computer Science.'
+        },
+        edu2: {
+          instituicao: 'PUCRS',
+          curso: 'Software Engineering',
+          periodo: '2022 - Present',
+          descricao: 'Bachelor in Software Engineering.'
+        }
+      },
       experienciaData: {
         experiencia1: {
           titulo: 'Junior Full Stack Developer',
@@ -230,7 +262,7 @@ export const LanguageProvider = ({ children }) => {
           descricaoCompleta: 'Web calculator with basic functionality, responsive layout and modern CSS styling.'
         },
         calculadoraJuros: {
-          titulo: 'Compound Interest Calculator',
+          titulo: 'Planinvest',
           descricao: 'Compound interest calculator with chart and table for monthly return tracking.',
           descricaoCompleta: 'Web application to calculate compound interest with chart and table for monthly return tracking. Allows you to calculate the future value of investments with different rates and periods, visualizing the investment evolution over time. Developed with HTML, CSS and JavaScript.'
         },

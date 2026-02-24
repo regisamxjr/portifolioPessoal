@@ -105,7 +105,7 @@ const Projetos = () => {
       imagem: calculadoraJurosImg,
       imagens: [calculadoraJurosImg, graficoEvolucaoImg, tabelaEvolucaoImg],
       github: 'https://github.com/regisamxjr/juros-compostos',
-      demo: '#'
+      demo: 'https://planinvest.netlify.app'
     },
     {
       titulo: t('projetosData.weather.titulo'),
@@ -366,12 +366,12 @@ const Projetos = () => {
                   </span>
                 ))}
               </div>
-              <div className="flex space-x-4">
-                <a href={selectedProject.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href={selectedProject.github} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
                   <FaGithub />
                   {t('verNoGitHub')}
                 </a>
-                <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                <a href={selectedProject.demo} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                   <FaExternalLinkAlt />
                   {t('verDemo')}
                 </a>
