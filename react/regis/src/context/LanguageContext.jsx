@@ -12,12 +12,10 @@ export const useLanguage = () => {
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
-    // Carrega o idioma salvo no localStorage ou usa 'pt' como padrão
     return localStorage.getItem('language') || 'pt';
   });
 
   useEffect(() => {
-    // Salva o idioma no localStorage quando mudar
     localStorage.setItem('language', language);
   }, [language]);
 
@@ -36,7 +34,7 @@ export const LanguageProvider = ({ children }) => {
       tagline: 'Em busca do sucesso através do esforço e dedicação',
       curriculo: 'Currículo',
       minhaJornada: 'Minha Jornada',
-      sobreText: 'Sou um estudante de Engenharia de Software na PUCRS, apaixonado por tecnologia e desenvolvimento de software. Possuo conhecimento avançado em Inglês e atualmente aprendendo alemão. Tenho perfil proativo, comunicativo e determinado, buscando sempre aprendizado contínuo e inovação. Atualmente, me dedico para aumentar cada dia mais a minha experiência profissional e me tornar um desenvolvedor mais capacitado.',
+      sobreText: 'Estudante de Engenharia de Software na PUCRS e atualmente Ciências da Computação na Universidade de Uppsala, na Suécia. Realizo um grande sonho ao estudar e aprimorar meu aprendizado em um país tão desenvolvido, aprimorando ainda mais minha capacidade de adaptação e comunicação, competências cada vez mais valorizadas.',
       competencias: 'Competências',
       softSkills: {
         proativo: 'Proativo',
@@ -125,7 +123,12 @@ export const LanguageProvider = ({ children }) => {
           titulo: 'Projeto Se Doce Fosse',
           descricao: 'Projeto acadêmico de e-commerce de doces',
           descricaoCompleta: 'Projeto acadêmico de e-commerce de doces, realizado em grupo no curso de Engenharia de Software na PUCRS, por meio da Agência Experimental de Engenharia de Software, com objetivo de tornar a venda de doces mais fácil e eficiente.'
-        }
+        }, 
+          AlhoPan: {
+            titulo: 'AlhoPan',
+            descricao: 'Landing page para exposição dos produtos e da marca Alhopan ',
+            descricaoCompleta: 'Primeiro freelance realizado, landing page para exposição dos produtos e da marca Alhopan'
+          }
       },
       // Certificados
       certificadosData: {
@@ -156,7 +159,7 @@ export const LanguageProvider = ({ children }) => {
       curriculo: 'Resume',
       // Sobre
       minhaJornada: 'My Journey',
-      sobreText: 'I am a Software Engineering student at PUCRS, passionate about technology and software development. I have advanced knowledge in English and am currently learning German. I have a proactive, communicative, and determined profile, always seeking continuous learning and innovation. Currently, I dedicate myself to increasing my professional experience every day and becoming a more qualified developer.',
+      sobreText: 'Software Engineering student at PUCRS and currently studying Computer Science at Uppsala University in Sweden. I am fulfilling a big dream by studying and improving my learning in such a developed country, further enhancing my adaptability and communication skills, which are increasingly valued.',
       competencias: 'Competencies',
       softSkills: {
         proativo: 'Proactive',
@@ -245,6 +248,11 @@ export const LanguageProvider = ({ children }) => {
           titulo: 'Se Doce Fosse Project',
           descricao: 'Academic e-commerce project for sweets',
           descricaoCompleta: 'Academic e-commerce project for sweets, carried out in a group in the Software Engineering course at PUCRS, through the Experimental Software Engineering Agency, with the aim of making the sale of sweets easier and more efficient.'
+        },
+        AlhoPan: {
+          titulo: 'AlhoPan',
+          descricao: 'Landing page for showcasing Alhopan products and brand',
+          descricaoCompleta: 'First freelance project, a landing page for showcasing Alhopan products and brand'
         }
       },
       // Certificados

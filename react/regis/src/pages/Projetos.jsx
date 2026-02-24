@@ -27,6 +27,7 @@ import timeSeDoceFosseImg from '../assets/img/timesedocefosse.png';
 import calculadoraJurosImg from '../assets/img/juroscompostos.png';
 import graficoEvolucaoImg from '../assets/img/graficoevolucao.png';
 import tabelaEvolucaoImg from '../assets/img/tabelaevolucao.png';
+import alhopanImg from '../assets/img/alhopan.png';
 const Projetos = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [imageIndices, setImageIndices] = useState({});
@@ -48,7 +49,6 @@ const Projetos = () => {
       github: 'https://github.com/regisamxjr/portfoliopessoal',
       demo: 'https://rxavier.netlify.app'
     },
-   
     {
       titulo: t('projetosData.manejoEstresse.titulo'),
       descricao: t('projetosData.manejoEstresse.descricao'),
@@ -79,6 +79,19 @@ const Projetos = () => {
       imagens: [seDoceFosseImg, logoSeDoceFosseImg, timeSeDoceFosseImg], 
       github: '',
       demo: '#'
+    },
+    {
+      titulo: t('projetosData.AlhoPan.titulo'),
+      descricao: t('projetosData.AlhoPan.descricao'),
+      descricaoCompleta: t('projetosData.AlhoPan.descricaoCompleta'),
+      tecnologias: [
+        { nome: 'React', icon: FaReact, cor: '#61DAFB' },
+        { nome: 'Tailwind', icon: SiTailwindcss, cor: '#06B6D4' },
+      ],
+      imagem: alhopanImg,
+      imagens: [alhopanImg],
+      github: '',
+      demo: 'https://alhopanbr.com.br'
     },
     {
       titulo: t('projetosData.calculadoraJuros.titulo'),

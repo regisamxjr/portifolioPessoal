@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaCode, FaDatabase, FaLightbulb, FaTools, FaUsers, FaSeedling, FaBriefcase, FaCalendarAlt } from 'react-icons/fa'
-import fotoPerfil from '../assets/img/fotoperfil.jpg'
+import fotoPerfil from '../assets/img/fotodeperfil.jpeg'
 import { useLanguage } from '../context/LanguageContext'
 
 const Sobre = () => {
