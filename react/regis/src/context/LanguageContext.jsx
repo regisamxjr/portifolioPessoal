@@ -45,6 +45,10 @@ export const LanguageProvider = ({ children }) => {
         dedicacao: 'Dedicação',
         entrega: 'Rápida Entrega'
       },
+      intercambioText: {
+        p1: 'O intercâmbio será realizado durante todo o ano de 2026 na cidade de Uppsala, na Suécia, conhecida por ser uma cidade universitária jovem e dinâmica, que abriga uma das instituições mais renomadas da Europa, a Uppsala University. A universidade possui uma excelente infraestrutura e reúne cerca de 50 mil estudantes, criando um ambiente acadêmico internacional e estimulante.',
+        p2: 'A cidade apresenta clima frio durante grande parte do ano, o que faz parte da experiência cultural sueca. No entanto, durante o verão, Uppsala se torna ainda mais ativa e vibrante, com eventos ao ar livre, atividades esportivas, shows e diversas oportunidades de interação social entre estudantes de diferentes partes do mundo.'
+      },
       mindset: 'Mindset',
       experienciaProfissional: 'Experiência Profissional',
       educacao: 'Educação',
@@ -66,9 +70,9 @@ export const LanguageProvider = ({ children }) => {
         experiencia1: {
           titulo: 'Desenvolvedor Junior Full Stack',
           empresa: 'Supernova',
-          periodo: 'Julho 2025 - Presente',
-          descricao: 'Desenvolvimento de sistemas integradas com chatbot e IA',
-          tecnologias: 'React, Node.js, PostgreSQL, Git'
+          periodo: 'Julho 2025 - Julho 2026',
+          descricao: 'Desenvolvedor focado em aplicações web, integrações com chatbots e AWS',
+          tecnologias: 'React, Node.js, PostgreSQL, Git, AWS'
         },
         
       },
@@ -186,6 +190,10 @@ export const LanguageProvider = ({ children }) => {
         dedicacao: 'Dedication',
         entrega: 'Fast Delivery'
       },
+      intercambioText: {
+        p1: 'The exchange program will take place throughout 2026 in the city of Uppsala, Sweden, known for being a young and dynamic university city that houses one of the most renowned institutions in Europe, Uppsala University. The university has an excellent infrastructure and brings together around 50,000 students, creating an international and stimulating academic environment.',
+        p2: 'The city has a cold climate for most of the year, which is part of the Swedish cultural experience. However, during the summer, Uppsala becomes even more active and vibrant, with outdoor events, sports activities, concerts and various opportunities for social interaction among students from different parts of the world.'
+      },
       mindset: 'Mindset',
       experienciaProfissional: 'Professional Experience',
       educacao: 'Education',
@@ -207,9 +215,9 @@ export const LanguageProvider = ({ children }) => {
         experiencia1: {
           titulo: 'Junior Full Stack Developer',
           empresa: 'Supernova',
-          periodo: 'July 2025 - Present',
-          descricao: 'Development of integrated systems with chatbot and AI',
-          tecnologias: 'React, Node.js, PostgreSQL, Git'
+          periodo: 'July 2025 - July 2026',
+          descricao: 'Developer focused on web applications, integrations with chatbots and AWS',
+          tecnologias: 'React, Node.js, PostgreSQL, Git, AWS'
         }
       },
       // Projetos

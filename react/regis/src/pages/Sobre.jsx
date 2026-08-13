@@ -176,10 +176,10 @@ const Sobre = () => {
             <div className="space-y-5 order-2">
               <div className="text-gray-300 leading-relaxed text-justify text-lg space-y-6">
                 <p>
-                  O intercâmbio será realizado durante todo o ano de 2026 na cidade de Uppsala, na Suécia, conhecida por ser uma cidade universitária jovem e dinâmica, que abriga uma das instituições mais renomadas da Europa, a Uppsala University. A universidade possui uma excelente infraestrutura e reúne cerca de 50 mil estudantes, criando um ambiente acadêmico internacional e estimulante.
+                  {t('intercambioText.p1')}
                 </p>
                 <p>
-                  A cidade apresenta clima frio durante grande parte do ano, o que faz parte da experiência cultural sueca. No entanto, durante o verão, Uppsala se torna ainda mais ativa e vibrante, com eventos ao ar livre, atividades esportivas, shows e diversas oportunidades de interação social entre estudantes de diferentes partes do mundo.
+                  {t('intercambioText.p2')}
                 </p>
               </div>
             </div>
