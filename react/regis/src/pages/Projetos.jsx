@@ -8,27 +8,27 @@ import {
 } from 'react-icons/si';
 import { useLanguage } from '../context/LanguageContext';
 
-import portifolioImg from '../assets/img/portifolio.png';
-import apideclimaImg from '../assets/img/apideclima.png';
-import javafxImg from '../assets/img/javafx.png';
-import soccerhangmanImg from '../assets/img/soccerhangman.png';
-import enzobarberImg from '../assets/img/enzobarber.png';
-import cadosurfcampImg from '../assets/img/cadosurfcamp.png';
-import calculadoraImg from '../assets/img/calculadora.png';
-import cardapioImg from '../assets/img/cardapio-restaurante.png';
-import lifveImg from '../assets/img/lifve.png';
-import veraxImg from '../assets/img/verax.png';
-import programaManejoDeEstresseImg from '../assets/img/manejodeestresse.png';
-import logoLumiarImg from '../assets/img/logomanejo.png';
-import timemanejoImg from '../assets/img/time-manejodeestresse.png';
-import seDoceFosseImg from '../assets/img/sedocefosse.png';
-import logoSeDoceFosseImg from '../assets/img/logosedocefosse.png';
-import timeSeDoceFosseImg from '../assets/img/timesedocefosse.png';
-import calculadoraJurosImg from '../assets/img/juroscompostos.png';
-import graficoEvolucaoImg from '../assets/img/graficoevolucao.png';
-import tabelaEvolucaoImg from '../assets/img/tabelaevolucao.png';
-import alhopanImg from '../assets/img/alhopan.png';
-import alhopan2Img from '../assets/img/alhopan2.png';
+import portifolioImg from '../assets/img/portifolio.webp';
+import apideclimaImg from '../assets/img/apideclima.webp';
+import javafxImg from '../assets/img/javafx.webp';
+import soccerhangmanImg from '../assets/img/soccerhangman.webp';
+import enzobarberImg from '../assets/img/enzobarber.webp';
+import cadosurfcampImg from '../assets/img/cadosurfcamp.webp';
+import calculadoraImg from '../assets/img/calculadora.webp';
+import cardapioImg from '../assets/img/cardapio-restaurante.webp';
+import lifveImg from '../assets/img/lifve.webp';
+import veraxImg from '../assets/img/verax.webp';
+import programaManejoDeEstresseImg from '../assets/img/manejodeestresse.webp';
+import logoLumiarImg from '../assets/img/logomanejo.webp';
+import timemanejoImg from '../assets/img/time-manejodeestresse.webp';
+import seDoceFosseImg from '../assets/img/sedocefosse.webp';
+import logoSeDoceFosseImg from '../assets/img/logosedocefosse.webp';
+import timeSeDoceFosseImg from '../assets/img/timesedocefosse.webp';
+import calculadoraJurosImg from '../assets/img/juroscompostos.webp';
+import graficoEvolucaoImg from '../assets/img/graficoevolucao.webp';
+import tabelaEvolucaoImg from '../assets/img/tabelaevolucao.webp';
+import alhopanImg from '../assets/img/alhopan.webp';
+import alhopan2Img from '../assets/img/alhopan2.webp';
 
 const hasLink = (url) => Boolean(url && url !== '#');
 
@@ -363,6 +363,8 @@ const Projetos = () => {
                     <img
                       src={getProjectImage(projeto, index)}
                       alt={projeto.titulo}
+                      loading="lazy"
+                      decoding="async"
                       className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.45)] transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                   </div>
@@ -531,6 +533,8 @@ const Projetos = () => {
                       key={`${selectedProject.id}-${index}`}
                       src={image}
                       alt={`${selectedProject.titulo} ${index + 1}`}
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                      decoding="async"
                       className={`max-h-[55vh] w-auto max-w-full object-contain transition-all duration-500 ${
                         index === modalImageIndex
                           ? 'opacity-100 relative'
@@ -584,6 +588,8 @@ const Projetos = () => {
                       <img
                         src={image}
                         alt=""
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-contain p-1"
                       />
                     </button>

@@ -6,7 +6,7 @@ import {
   SiJavascript, SiTailwindcss, SiMongodb, SiC, SiPostgresql, SiExpress
 } from 'react-icons/si';
 import { useLanguage } from '../context/LanguageContext';
-import profilePicture from '../assets/img/profilepicture.png';
+import profilePicture from '../assets/img/profilepicture.webp';
 
 const technologies = [
   { name: 'Java', icon: FaJava, color: '#EF4444' },
@@ -43,6 +43,8 @@ export default function Home() {
             src={profilePicture}
             alt=""
             aria-hidden="true"
+            fetchPriority="high"
+            decoding="async"
             className="absolute right-[-8%] top-1/2 -translate-y-1/2 w-[55vw] max-w-[640px] min-w-[280px] h-auto object-cover opacity-[0.45] hidden lg:block"
             style={{
               WebkitMaskImage: 'linear-gradient(to left, black 35%, transparent 100%)',

@@ -2,12 +2,12 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 // Importando as imagens
-import pooImg from '../assets/certificados/poo.png';
-import reactjsImg from '../assets/certificados/reactjs.png';
-import webstartImg from '../assets/certificados/webstart.png';
-import versionamentoImg from '../assets/certificados/versionamento.png';
-import golangImg from '../assets/certificados/golang.png';
-import bancodedadosImg from '../assets/certificados/bancodedados.png';
+import pooImg from '../assets/certificados/poo.webp';
+import reactjsImg from '../assets/certificados/reactjs.webp';
+import webstartImg from '../assets/certificados/webstart.webp';
+import versionamentoImg from '../assets/certificados/versionamento.webp';
+import golangImg from '../assets/certificados/golang.webp';
+import bancodedadosImg from '../assets/certificados/bancodedados.webp';
 
 const Certificados = () => {
   const { t } = useLanguage();
@@ -62,6 +62,8 @@ const Certificados = () => {
                 <img
                   src={certificado.imagem}
                   alt={certificado.titulo}
+                  loading="lazy"
+                  decoding="async"
                   className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                 />
               </div>

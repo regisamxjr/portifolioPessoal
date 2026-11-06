@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { FaBriefcase, FaCalendarAlt } from 'react-icons/fa'
-import intercambio1 from '../assets/img/intercambio1.jpeg'
-import intercambio2 from '../assets/img/intercambio2.jpeg'
-import intercambio3 from '../assets/img/intercambio3.jpeg'
-import intercambio4 from '../assets/img/intercambio4.jpeg'
+import intercambio1 from '../assets/img/intercambio1.webp'
+import intercambio2 from '../assets/img/intercambio2.webp'
+import intercambio3 from '../assets/img/intercambio3.webp'
+import intercambio4 from '../assets/img/intercambio4.webp'
 import { useLanguage } from '../context/LanguageContext'
 
 const Sobre = () => {
@@ -158,6 +158,8 @@ const Sobre = () => {
                     key={image}
                     src={image}
                     alt={`${t('intercambioFoto')} ${index + 1}`}
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
                     className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out ${
                       index === exchangeIndex
                         ? 'opacity-100 scale-100'
