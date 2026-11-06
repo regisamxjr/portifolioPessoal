@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { FaBriefcase, FaCalendarAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { FaBriefcase, FaCalendarAlt } from 'react-icons/fa'
 import intercambio1 from '../assets/img/intercambio1.jpeg'
 import intercambio2 from '../assets/img/intercambio2.jpeg'
 import intercambio3 from '../assets/img/intercambio3.jpeg'
@@ -21,14 +21,6 @@ const Sobre = () => {
   ]
 
   const exchangeImages = [intercambio1, intercambio2, intercambio3, intercambio4]
-
-  const goToPreviousExchange = () => {
-    setExchangeIndex((prev) => (prev - 1 + exchangeImages.length) % exchangeImages.length)
-  }
-
-  const goToNextExchange = () => {
-    setExchangeIndex((prev) => (prev + 1) % exchangeImages.length)
-  }
 
   useEffect(() => {
     if (isCarouselPaused) return undefined
@@ -175,24 +167,6 @@ const Sobre = () => {
                 ))}
 
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-black/10 pointer-events-none" />
-
-                <button
-                  type="button"
-                  onClick={goToPreviousExchange}
-                  aria-label={t('imagemAnterior')}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/55 border border-white/20 text-white hover:bg-blue-600 hover:border-blue-300 transition-colors flex items-center justify-center"
-                >
-                  <FaChevronLeft />
-                </button>
-
-                <button
-                  type="button"
-                  onClick={goToNextExchange}
-                  aria-label={t('proximaImagem')}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/55 border border-white/20 text-white hover:bg-blue-600 hover:border-blue-300 transition-colors flex items-center justify-center"
-                >
-                  <FaChevronRight />
-                </button>
               </div>
 
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2">
